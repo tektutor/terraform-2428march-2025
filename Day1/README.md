@@ -562,3 +562,82 @@ ansible-playbook ping-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/51c4950f-1746-4f9a-b652-9271b4a8ab8a)
 ![image](https://github.com/user-attachments/assets/1363bc71-b5aa-43f5-9c76-aeb8be47f209)
+
+## Info - Ansible Host and Group variables in Ansible Inventory
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible
+cat hosts
+cat hosts-refactored
+```
+<pre>
+- In the refactored hosts inventory file, ansible_port is called Host variable as we had to mention the ansible_port for each ansible node.
+- ansible_user, ansible_host, ansible_private_key_file are called Group variables as they are common for the ansible nodes listed under all group
+- group variables can also be defined for each groups in the inventory file
+</pre>
+
+## Info - Ansible Idempotency Property
+<pre>
+- The DevOps engineer when they write an ansible playbook to put the ansible node into a desired state
+- When ansible executes the playbook, it invokes the ansible modules, certain ansible modules are idempotent while others are not
+- Whichever ansible module is idempotent, it will check the current state of the machine and compares that with the expected(desired) state of the machine, if the current state of the machine matches with the desired state then ansible will do nothing.  It simply reports the task as success with green color
+- In case ansible finds the machine's current state is different from the desired state then ansible performs the necessary actions to ensure the current state of the machines matches the desired state and reports the status in Yellow color indicates it had to run the task and modify the machine in order to make it successful
+- Subsequent executions, the current state of the machine when it matches the desired state it would simple report success with no change using green color
+- this property is called Idempotency or Itempotent
+</pre>
+
+## Lab - Install nginx web server into Ubuntu ansible nodes using an ansible playbook
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible/ansible-playbooks/nginx
+cat install-nginx-playbook.yml
+ansible-playbook install-nginx-playbook.yml
+curl http://localhost:8001
+curl http://localhost:8002
+ansible ubuntu1 -m shell -a "service nginx status"
+
+cat install-nginx-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/5e6c9763-b3b2-46d5-a3db-260aef8fc587)
+![image](https://github.com/user-attachments/assets/5e036125-d784-4ff9-a03b-ec386e505776)
+
+In the above output
+<pre>
+- Green color indicates success with no change
+- Yellow color indicates success with change, i.e during installation ansible would have created folders, copy certain files, updated existing files
+- unreachable=0, means ansbile is able to connect to the ansible node via SSH
+- failed=0, means all the tasks that were executed on individual anisble nodes were successful
+- skipped=0, no conditional tasks were skipped on any ansible nodes
+- rescued=0, indicates no tasks lead to executing exception(catch or recuse) code
+- ignored=0, indicates no errors were ignored in any ansible node while executing the ansible playbook
+</pre>
+
+Now, let's copy the default configuration file from ubuntu1 container to local machine
+```
+docker cp ubuntu1:/etc/nginx/sites-available/default .
+cat default
+```
+![image](https://github.com/user-attachments/assets/70e40817-102f-4995-8759-b2c3e0ee849c)
+![image](https://github.com/user-attachments/assets/c00e87ce-3be4-4f93-8cd6-4b56d89d2b8d)
+
+The updated playbook looks as shown below
+![image](https://github.com/user-attachments/assets/d912d7a9-d7e7-49b2-8fc0-175f7ebce5ba)
+
+Let's run the playbook
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible/ansible-playbooks/nginx
+cat install-nginx-playbook.yml
+ansible-playbook install-nginx-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/e1f8d2d3-d897-4eb3-8c9e-9d5faedc4fce)
+![image](https://github.com/user-attachments/assets/44d89ebc-f16d-4afc-924b-7eb5fc019d95)
+![image](https://github.com/user-attachments/assets/3a4d8279-383c-422d-b224-b2940a0dfa42)
+![image](https://github.com/user-attachments/assets/dc4864cf-8d25-4e22-b2c3-22bd1d1ba9d9)
