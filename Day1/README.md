@@ -56,7 +56,54 @@
   - just like VMs, containers also get its own port range ( 0 to 65535 ports )
   - just like VMs, containers also get its own IP Address ( generally private IP addresses )
 - each container will host one application and its dependent configuration and dependencies
+- with containerization technology, one can run linux containerized applications on Linux OS, Windows OS or Mac OS
 </pre>
 
-## 
+## Info - Container Engine
+<pre>
+- is a high-level software that helps managing conainers and container images
+- is very user-friendly, abstracts all the lowel-level OS features that enables the container technology
+- end-users need not have to be an expert in Linux kernel or OS kernel features to create container or manage container images
+- under the hood, container engines depends on Container Runtimes
+- examples
+  - Docker Container Engine depends on containerd which in turn depends on runC container runtime
+  - Podman Container Engine depends on CRI-O container runtime
+</pre>  
+
+## Info - Container Runtime
+<pre>
+- is a low-level software that helps managing containers and container images
+- it is not so user-friendly, hence end-users don't this use directly
+- examples
+  - runC container runtime
+  - CRI-O container runtime
+</pre>
+
+## Info - Container Image
+<pre>
+- is a blueprint or specification of a container
+- any software tool that need on a container has to installed on the image level
+- when containers are created using a container image, whatever softwares are installed on the image are made available in the containers
+- with One container image, multiple containers instances can be created
+- Container Images are similar to Windows/Linux DVD ISO files
+</pre>
+
+
+## Info - Containers
+<pre>
+- container is a running instance of a Container Image
+- each containers get its own IP address
+- each container has its own file system, network card, port range, network stack, etc.,
+- each container represents one application
+- each containers should run only one main application
+- though it is technically possible to run mutiple applications within a single container, it is not a best practice
+- as per best practice, each container should host only one main application
+- For example
+  - a container can run a single REST API
+  - a container can run a single SOAP API
+  - a container can run a single Microservice
+  - a container can run a single web server, application service, DB Server, Message Queue Server, etc.,
+</pre>
+
+
 
