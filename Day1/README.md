@@ -498,3 +498,18 @@ Expected output
 ![image](https://github.com/user-attachments/assets/dc412bc5-b1bc-44f4-a0c7-2ec1e28fea69)
 ![image](https://github.com/user-attachments/assets/824616ab-c88b-4e76-9fbc-b7c5d22205d5)
 ![image](https://github.com/user-attachments/assets/64b5f249-a85e-4f4b-987b-90f8fd47264f)
+
+## Info - Ansible Playbook Structure
+<pre>
+- Ansible Playbook is a YAML file
+- Each Ansible Playbook has one to many Play
+- Each Play has
+  - zero to many tasks( list of tasks )
+  - zero to many roles( list of roles )
+  - targets a list of ansible nodes or aleast a single ansible node to run the module/playbook
+- Playbook invokes one or more ansible modules in a particular sequence one after the other to perform a configuration management automation
+</pre>
+
+![ansible](StructureofAnsiblePlaybook.png)
+
+
