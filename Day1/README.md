@@ -38,7 +38,7 @@
     - Virtual Graphics Cards
 </pre>
 
-## Containerization Technology
+## Info - Containerization Technology
 <pre>
 - is a light weight virtualization technology
 - all the containers that runs in the same OS/machine, shares the hardware resources available on the Host OS
@@ -55,6 +55,8 @@
   - just like VMs, containers also has their own file system
   - just like VMs, containers also get its own port range ( 0 to 65535 ports )
   - just like VMs, containers also get its own IP Address ( generally private IP addresses )
+- each container will host one application and its dependent configuration and dependencies
 </pre>
 
+## 
 
