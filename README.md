@@ -5,7 +5,7 @@
 - In case you have any challenge in accessing the RPS Cloud lab, please leave a message to RPS Consulting PVT Ltd user from WebEx
 - Kindly share your Cloud user details and explain the issue clearly for the RPS IT team to get it fixed quickly
 - There are two login
-  - the first login is to login to the RPS Cloud from the web browser
+  - the first login is to get into RPS Cloud from the web browser
   - the second login is to get inside the Ubuntu box
 - So while reporting issues, clearly mention whether you have problem login to Cloud or Ubuntu machine
 </pre>  
