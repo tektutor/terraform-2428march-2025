@@ -575,3 +575,15 @@ cat hosts-refactored
 - ansible_user, ansible_host, ansible_private_key_file are called Group variables as they are common for the ansible nodes listed under all group
 - group variables can also be defined for each groups in the inventory file
 </pre>
+
+## Lab - Install nginx web server into Ubuntu ansible nodes using an ansible playbook
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible/ansible-playbooks/nginx
+cat install-nginx-playbook.yml
+ansible-playbook install-nginx-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/918e2a6e-af06-4557-8bb3-66e5f96192f5)
