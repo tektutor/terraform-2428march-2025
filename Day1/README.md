@@ -38,7 +38,7 @@
     - Virtual Graphics Cards
 </pre>
 
-## Info - Containerization Technology
+## Info - Containerization Technologydocker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
 <pre>
 - is a light weight virtualization technology
 - all the containers that runs in the same OS/machine, shares the hardware resources available on the Host OS
@@ -345,3 +345,21 @@ docker ps
 
 Expected output
 ![image](https://github.com/user-attachments/assets/b98ac94f-7308-4744-8416-b7481a74ee0b)
+
+## Lab - Let's verify if we are able to SSH into ubuntu1 and ubuntu2 containers without providing password
+```
+docker ps
+
+ssh -p 2001 root@localhost
+exit
+
+ssh -p 2002 root@localhost
+exit
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/6feda23c-249f-491a-96f8-507159185b9e)
+![image](https://github.com/user-attachments/assets/61d93920-745e-4542-8ef6-dd7dcc8d363b)
+
+
+
