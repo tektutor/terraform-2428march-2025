@@ -562,3 +562,16 @@ ansible-playbook ping-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/51c4950f-1746-4f9a-b652-9271b4a8ab8a)
 ![image](https://github.com/user-attachments/assets/1363bc71-b5aa-43f5-9c76-aeb8be47f209)
+
+## Info - Ansible Host and Group variables in Ansible Inventory
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible
+cat hosts
+cat hosts-refactored
+```
+<pre>
+- In the refactored hosts inventory file, ansible_port is called Host variable as we had to mention the ansible_port for each ansible node.
+- ansible_user, ansible_host, ansible_private_key_file are called Group variables as they are common for the ansible nodes listed under all group
+- group variables can also be defined for each groups in the inventory file
+</pre>
