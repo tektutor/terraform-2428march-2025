@@ -588,3 +588,14 @@ ansible-playbook install-nginx-playbook.yml
 
 Expected output
 ![image](https://github.com/user-attachments/assets/5e6c9763-b3b2-46d5-a3db-260aef8fc587)
+
+In the above output
+<pre>
+- Green color indicates success with no change
+- Yellow color indicates success with change, i.e during installation ansible would have created folders, copy certain files, updated existing files
+- unreachable=0, means ansbile is able to connect to the ansible node via SSH
+- failed=0, means all the tasks that were executed on individual anisble nodes were successful
+- skipped=0, no conditional tasks were skipped on any ansible nodes
+- rescued=0, indicates no tasks lead to executing exception(catch or recuse) code
+- ignored=0, indicates no errors were ignored in any ansible node while executing the ansible playbook
+</pre>
