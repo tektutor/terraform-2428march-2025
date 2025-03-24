@@ -419,7 +419,7 @@ docker inspect rocky2 | grep IPA
 Expected output
 ![image](https://github.com/user-attachments/assets/0f723f32-adc8-4b74-977d-a0b52f1e7a49)
 
-## Lab - Running ansible ad-hoc command to test the connectivity with ansible ping module
+## Lab - Running ansible ad-hoc command to test the ansible node connectivity with ansible ping module
 ```
 cd ~/terraform-2428march-2025
 git pull
