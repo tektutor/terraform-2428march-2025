@@ -1,4 +1,4 @@
-# Day 1
+![image](https://github.com/user-attachments/assets/74f15b89-36a2-4248-9caf-09805f966fb1)# Day 1
 
 ## Info - Hypervisor Overview
 <pre>
@@ -468,3 +468,32 @@ The below chain of activities happens
 - ansible deletes the temp folder on the remote ansible nodes
 - ansible then gives a summary of the outcomes about all the ansible nodes
 </pre>
+
+## Lab - Collecting facts using ansible setup module
+<pre>
+- ansible facts are meta-data about remote ansible nodes
+- some intersting facts ansible collects are
+  - machine hard details
+  - python version
+  - OS details
+    - Linux distribution name
+    - Linux distribution version
+  - package manager 
+</pre>
+
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible/static-inventory
+ansible -i hosts ubuntu1 -m setup
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/1cf39738-9655-4519-8afd-95eec6877be9)
+![image](https://github.com/user-attachments/assets/a86cfb80-4552-4ae2-81e7-288ae62d0ea1)
+![image](https://github.com/user-attachments/assets/dc421a93-6708-42fe-ac36-721ac996512b)
+![image](https://github.com/user-attachments/assets/51161be3-5805-4158-9f0e-398aa99ae5c5)
+![image](https://github.com/user-attachments/assets/5fa8727e-a139-4e19-a2f5-e989b5c588c2)
+![image](https://github.com/user-attachments/assets/dc412bc5-b1bc-44f4-a0c7-2ec1e28fea69)
+![image](https://github.com/user-attachments/assets/824616ab-c88b-4e76-9fbc-b7c5d22205d5)
+![image](https://github.com/user-attachments/assets/64b5f249-a85e-4f4b-987b-90f8fd47264f)
