@@ -1,4 +1,4 @@
-# Day 1
+![image](https://github.com/user-attachments/assets/74f15b89-36a2-4248-9caf-09805f966fb1)# Day 1
 
 ## Info - Hypervisor Overview
 <pre>
@@ -419,14 +419,146 @@ docker inspect rocky2 | grep IPA
 Expected output
 ![image](https://github.com/user-attachments/assets/0f723f32-adc8-4b74-977d-a0b52f1e7a49)
 
-## Lab - Running ansible ad-hoc command to test the connectivity with ansible ping module
+## Lab - Running ansible ad-hoc command to test the ansible node connectivity with ansible ping module
+In the below ansible ad-hoc command,
+<pre>
+i - switch indicates what follows is the name of the inventory file
+all - indicates the group of machines you wish to ping
+dev - indicates you wish to ping all the machines under dev group
+prod - indicates you wish to ping all the machines under prod group
+m - switch indicates, the module you wish to run on the ansible node/group of nodes
+ubuntu1 - indicates you wish to ping only the ubuntu1 ansible node
+rocky1 - indicates you wish to ping only the rocky1 ansible node 
+ping - is the name of the ansible module (ping.py) you wish to run on the ansible node(s)
+</pre>
+
 ```
 cd ~/terraform-2428march-2025
 git pull
 cd Day1/ansible/static-inventory
 ansible -i hosts all -m ping
+
+ansible -i hosts dev -m ping
+ansible -i hosts prod -m ping
+
+ansible -i hosts ubuntu1 -m ping
+ansible -i hosts rocky1 -m ping
 ```
 
 Expected output
 ![image](https://github.com/user-attachments/assets/84259fd0-faaa-4b3c-bd3b-b96f98276aa4)
+![image](https://github.com/user-attachments/assets/880010ea-c1fc-49a3-a532-61d61b93a761)
+![image](https://github.com/user-attachments/assets/08ca28dd-a8d8-4ee9-8a05-7ab5b688fded)
 
+## Info - What happens behind the scenes when we issue ping ansible ad-hoc command
+```
+ansible -i hosts all -m ping
+```
+
+The below chain of activities happens
+<pre>
+- the below activities are done in parallel to all ansible nodes
+- ansible will create a temp directory on the Ansible Controller Machine
+- it copies the ping.py ansible module to the temp directory
+- ansible creates a temp directory on the remote ansible node
+- ansible copies the ping.py ansible module from Ansible Controller Machine(ACM) to the remote ansible nodes(s) using SCP/SFTP 
+- ansible remotes assigns execute permission to the ping.py on the ansible nodes
+- ansible runs the python script on the remote machine
+- ansible captures the output of the ping.py python script
+- ansible deletes the temp folder on the remote ansible nodes
+- ansible then gives a summary of the outcomes about all the ansible nodes
+</pre>
+
+## Lab - Collecting facts using ansible setup module using an ad-hoc command
+<pre>
+- ansible ad-hoc command helps invoking one ansible module at a time to try the module before using them in ansible playbooks
+- ansible facts are meta-data about remote ansible nodes  
+- some intersting facts ansible collects are
+  - machine hard details
+  - python version
+  - OS details
+    - Linux distribution name
+    - Linux distribution version
+  - package manager 
+</pre>
+
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible/static-inventory
+ansible -i hosts ubuntu1 -m setup
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/1cf39738-9655-4519-8afd-95eec6877be9)
+![image](https://github.com/user-attachments/assets/a86cfb80-4552-4ae2-81e7-288ae62d0ea1)
+![image](https://github.com/user-attachments/assets/dc421a93-6708-42fe-ac36-721ac996512b)
+![image](https://github.com/user-attachments/assets/51161be3-5805-4158-9f0e-398aa99ae5c5)
+![image](https://github.com/user-attachments/assets/5fa8727e-a139-4e19-a2f5-e989b5c588c2)
+![image](https://github.com/user-attachments/assets/dc412bc5-b1bc-44f4-a0c7-2ec1e28fea69)
+![image](https://github.com/user-attachments/assets/824616ab-c88b-4e76-9fbc-b7c5d22205d5)
+![image](https://github.com/user-attachments/assets/64b5f249-a85e-4f4b-987b-90f8fd47264f)
+
+## Info - Ansible Playbook Structure
+<pre>
+- Ansible Playbook is a YAML file
+- Each Ansible Playbook has one to many Play
+- Each Play has
+  - zero to many tasks( list of tasks )
+  - zero to many roles( list of roles )
+  - targets a list of ansible nodes or aleast a single ansible node to run the module/playbook
+- Playbook invokes one or more ansible modules in a particular sequence one after the other to perform a configuration management automation
+</pre>
+
+![ansible](StructureofAnsiblePlaybook.png)
+
+## Info - Getting help about ansible modules
+
+Listing all the ansible modules supported, to scroll you could use the page up/down or cursor movements keys ( up/down )
+```
+ansible-doc -l
+ansible-doc ping
+ansible-doc setup
+ansible-doc shell
+ansible-doc copy
+ansible-doc command
+ansible-doc file
+ansible-doc templates
+ansible-doc service
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/cc68fb8b-d0a1-4a3f-ae2c-f78b912c22ea)
+![image](https://github.com/user-attachments/assets/ace4ba8a-4b05-4f26-ab73-9e92719456e1)
+![image](https://github.com/user-attachments/assets/45486b29-f997-41e4-9c61-3dbc694a7ce5)
+![image](https://github.com/user-attachments/assets/da15774f-aab4-4baa-ae3d-39eb85697b4b)
+
+## Info - Ansible configuration file (ansible.cfg)
+<pre>
+- the ansible.cfg file has user specific overrides, system wide configurations, etc.,
+- ansible checks an environment variable called ANSIBLE_CONFIG to locate the path and name of the ansible.cfg as a first attempt to locate ansible.cfg
+- if the environment is not defined, ansible attempts to locate the ansible.cfg in the current directory, if it finds it uses that and stops any further search for ansible.cfg
+- in case the ansible.cfg is not found in the current directory, then it attempts to locate the .ansible.cfg file under the user home directory
+- in case the ansible.cfg is not found in the home directory, then as a last attempt it will search for /etc/ansible/ansible.cfg file
+- wherever ansible is able to locate the ansible.cfg file first, it uses that and stops further searching
+
+- in ansible.cfg file, you could configure many things
+  - ssh timeout
+  - colors 
+  - default sudo user
+  - can point the inventory file that must be used
+  - suppress warnings, etc.,
+</pre>
+![image](https://github.com/user-attachments/assets/fb73bfa1-6f41-4598-be56-d4922bf2f94a)
+
+## Lab - Running your first ansible playbook
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible/ansible-playbooks
+ansible-playbook ping-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/51c4950f-1746-4f9a-b652-9271b4a8ab8a)
+![image](https://github.com/user-attachments/assets/1363bc71-b5aa-43f5-9c76-aeb8be47f209)
