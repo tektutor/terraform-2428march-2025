@@ -327,10 +327,15 @@ Expected output
 
 ## Lab - Let's create two containers using the Custom ubuntu ansible node image we build in the previous exercise
 
+In case you already have containers with the same name or other containers using the same port, you can delete those containers
+```
+docker rm -f $(docker ps -aq)
+```
+
 The below command will create two containers and starts the two containers
 ```
 docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
-docker run -d --name ubuntu2 --hostname ubuntu2 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:latest
 ```
 
 Listing the currently running containers
