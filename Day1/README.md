@@ -332,6 +332,12 @@ In case you already have containers with the same name or other containers using
 docker rm -f $(docker ps -aq)
 ```
 
+If you wish to delete just one container
+```
+docker rm -f ubuntu1
+docker rm -f ubuntu2
+```
+
 The below command will create two containers and starts the two containers
 ```
 docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
