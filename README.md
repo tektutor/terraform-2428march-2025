@@ -20,6 +20,8 @@
   - vi/vim editor
   - known_hosts, authourized_keys, public/private keys, etc.,
 - You know DevOps conceptually, you are aware of CI/CD, you are aware of Jenkins
+- In case you are not meeting the above pre-requisities we will have challenge in completing all the training topics agreed
+  
 </pre>
 
 ## How to fix/troubleshoot the RPS Cloud Lab issues?
