@@ -425,8 +425,16 @@ cd ~/terraform-2428march-2025
 git pull
 cd Day1/ansible/static-inventory
 ansible -i hosts all -m ping
+
+ansible -i hosts dev -m ping
+ansible -i hosts prod -m ping
+
+ansible -i hosts ubuntu1 -m ping
+ansible -i hosts rocky1 -m ping
 ```
 
 Expected output
 ![image](https://github.com/user-attachments/assets/84259fd0-faaa-4b3c-bd3b-b96f98276aa4)
+![image](https://github.com/user-attachments/assets/880010ea-c1fc-49a3-a532-61d61b93a761)
+![image](https://github.com/user-attachments/assets/08ca28dd-a8d8-4ee9-8a05-7ab5b688fded)
 
