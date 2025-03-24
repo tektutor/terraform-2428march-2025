@@ -332,6 +332,12 @@ In case you already have containers with the same name or other containers using
 docker rm -f $(docker ps -aq)
 ```
 
+If you wish to delete just specific containers
+```
+docker rm -f ubuntu1
+docker rm -f ubuntu2
+```
+
 The below command will create two containers and starts the two containers
 ```
 docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
@@ -362,5 +368,65 @@ Expected output
 ![image](https://github.com/user-attachments/assets/6feda23c-249f-491a-96f8-507159185b9e)
 ![image](https://github.com/user-attachments/assets/61d93920-745e-4542-8ef6-dd7dcc8d363b)
 
+## Lab - Building a custom rocky linux ansible node docker image to use it as an ansible node
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/CustomDockerImages/rocky
+cp ~/.ssh/id_ed25519.pub authorized_keys
+docker build -t tektutor/rocky-ansible-node:latest .
+docker images
+```
 
+Expected output
+![image](https://github.com/user-attachments/assets/289e644b-b174-4c07-b5b8-a3494086103d)
+![image](https://github.com/user-attachments/assets/5fb40aaf-1b1f-4179-b0f9-00e26d8b912f)
+
+## Lab - Create two rocky container to use them as ansible nodes
+```
+docker images | grep tektutor/rocky-ansible-node
+docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:latest
+docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:latest
+docker ps
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/6af972dc-6c5e-4283-858b-38745529e069)
+
+
+## Lab - Let's verify if we are able to SSH into rocky1 and rocky2 ansible node containers with providing password
+```
+docker ps
+
+ssh -p 2003 root@localhost
+exit
+
+ssh -p 2004 root@localhost
+exit
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/c9d1fe51-be31-4158-9513-f2cd29c0ee16)
+
+## Lab - Finding IP address of ubuntu1, ubuntu2, rocky1 and rocky2 ansible nodes
+```
+docker inspect -f {{.NetworkSettings.IPAddress}} ubuntu1
+docker inspect -f {{.NetworkSettings.IPAddress}} ubuntu2
+docker inspect rocky1 | grep IPA
+docker inspect rocky2 | grep IPA
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/0f723f32-adc8-4b74-977d-a0b52f1e7a49)
+
+## Lab - Running ansible ad-hoc command to test the connectivity with ansible ping module
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible/static-inventory
+ansible -i hosts all -m ping
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/84259fd0-faaa-4b3c-bd3b-b96f98276aa4)
 
