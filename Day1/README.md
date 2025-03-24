@@ -584,10 +584,14 @@ git pull
 cd Day1/ansible/ansible-playbooks/nginx
 cat install-nginx-playbook.yml
 ansible-playbook install-nginx-playbook.yml
+curl http://localhost:8001
+curl http://localhost:8002
+ansible ubuntu1 -m shell -a "service nginx status"
 ```
 
 Expected output
 ![image](https://github.com/user-attachments/assets/5e6c9763-b3b2-46d5-a3db-260aef8fc587)
+![image](https://github.com/user-attachments/assets/5e036125-d784-4ff9-a03b-ec386e505776)
 
 In the above output
 <pre>
@@ -599,3 +603,11 @@ In the above output
 - rescued=0, indicates no tasks lead to executing exception(catch or recuse) code
 - ignored=0, indicates no errors were ignored in any ansible node while executing the ansible playbook
 </pre>
+
+Now, let's copy the default configuration file from ubuntu1 container to local machine
+```
+docker cp ubuntu1:/etc/nginx/sites-available/default .
+cat default
+```
+![image](https://github.com/user-attachments/assets/70e40817-102f-4995-8759-b2c3e0ee849c)
+![image](https://github.com/user-attachments/assets/c00e87ce-3be4-4f93-8cd6-4b56d89d2b8d)
