@@ -118,4 +118,21 @@
      - hence worldwide support is offered by Docker Inc organization
 </pre>
 
+## Info - Configuration Management Tools
+<pre>
+- is a DevOps tool that helps automating system administrative configuration management activities\
+- Configuration Management
+  - installing a software in Windows/Linux/Unix/Mac, network switches/routers
+  - uninstalling a software in Windows/Linux/Unix/Mac, network switches/routers
+  - managing Windows/Linux/Unix users
+  - installing Oracle/MySql/MongoDB/CouchBase DB Servers, and then creating different DB users with various permissions
+  - Importing Databases,tables and populating data into those tables, providing access to required users or denying access to certain users
+  - already there is machine with Operating System pre-installed ( this is the assumption )
+  - configuring Firewalls, application servers, web servers, connecting a machine to a domain, patching OS, etc.,
+- Examples
+  - Puppet
+  - Chef
+  - Salt/SaltStack
+  - Ansible
+</pre>
 
