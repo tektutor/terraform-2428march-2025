@@ -549,3 +549,4 @@ Expected output
   - can point the inventory file that must be used
   - suppress warnings, etc.,
 </pre>
+![image](https://github.com/user-attachments/assets/fb73bfa1-6f41-4598-be56-d4922bf2f94a)
