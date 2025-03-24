@@ -1,5 +1,6 @@
 FROM ubuntu:latest
-MAINTAINER Jeganathan Swaminathan <jegan@tektutor.org>
+LABEL AUTHOR="Jeganathan Swaminathan"
+LABEL AUTHOR_EMAIL="jegan@tektutor.org"
 
 RUN apt-get update && apt-get install -y openssh-server python3
 RUN mkdir /var/run/sshd
