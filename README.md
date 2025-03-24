@@ -1,6 +1,6 @@
 # Terraform 24 to 28 March 2025 Batch
 
-## Check you RPS Cloud lab 
+## Check you RPS Cloud lab & complete the pre-test
 <pre>
 - Kindly login to your RPS Cloud machine with the credentials shared by your L&D focal point
 - Please make sure ** you're not ** using the demo link, demo credentials
