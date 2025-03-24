@@ -532,3 +532,20 @@ Expected output
 ![image](https://github.com/user-attachments/assets/ace4ba8a-4b05-4f26-ab73-9e92719456e1)
 ![image](https://github.com/user-attachments/assets/45486b29-f997-41e4-9c61-3dbc694a7ce5)
 ![image](https://github.com/user-attachments/assets/da15774f-aab4-4baa-ae3d-39eb85697b4b)
+
+## Info - Ansible configuration file (ansible.cfg)
+<pre>
+- the ansible.cfg file has user specific overrides, system wide configurations, etc.,
+- ansible checks an environment variable called ANSIBLE_CONFIG to locate the path and name of the ansible.cfg as a first attempt to locate ansible.cfg
+- if the environment is not defined, ansible attempts to locate the ansible.cfg in the current directory, if it finds it uses that and stops any further search for ansible.cfg
+- in case the ansible.cfg is not found in the current directory, then it attempts to locate the .ansible.cfg file under the user home directory
+- in case the ansible.cfg is not found in the home directory, then as a last attempt it will search for /etc/ansible/ansible.cfg file
+- wherever ansible is able to locate the ansible.cfg file first, it uses that and stops further searching
+
+- in ansible.cfg file, you could configure many things
+  - ssh timeout
+  - colors 
+  - default sudo user
+  - can point the inventory file that must be used
+  - suppress warnings, etc.,
+</pre>
