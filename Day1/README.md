@@ -429,6 +429,7 @@ prod - indicates you wish to ping all the machines under prod group
 m - switch indicates, the module you wish to run on the ansible node/group of nodes
 ubuntu1 - indicates you wish to ping only the ubuntu1 ansible node
 rocky1 - indicates you wish to ping only the rocky1 ansible node 
+ping - is the name of the ansible module (ping.py) you wish to run on the ansible node(s)
 </pre>
 
 ```
