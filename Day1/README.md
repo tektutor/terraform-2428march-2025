@@ -391,3 +391,4 @@ docker ps
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/6af972dc-6c5e-4283-858b-38745529e069)
