@@ -1,5 +1,27 @@
 # Terraform 24 to 28 March 2025 Batch
 
+## Training pre-requisites
+<pre>
+- all participants are expected to be comfortable working in Linux command-line
+- all participants are comfortable working in Git/GitHub from Linux command-line
+  - how to clone repository
+  - how to pull delta changes 
+  - resolving conflicts while pulling changes
+  - basic working knowledge in Git/GitHub is assumed
+- all participants are comfortable working in Docker from Linux command-line
+- all participants are aware of
+  - how to install softwares in Linux from commandline
+  - how to uninstall softwares in Linux from commandline
+  - linux package manager
+  - linux distributions
+  - SSH connection
+  - FTP ( SCP and/or SFTP )
+  - linux commands to create folders, navigate between folders,copying files, deleting files from command line
+  - vi/vim editor
+  - known_hosts, authourized_keys, public/private keys, etc.,
+- You know DevOps conceptually, you are aware of CI/CD, you are aware of Jenkins
+</pre>
+
 ## How to fix/troubleshoot the RPS Cloud Lab issues?
 <pre>
 - In case you have any challenge in accessing the RPS Cloud lab, please leave a message to RPS Consulting PVT Ltd user from WebEx
