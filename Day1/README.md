@@ -105,5 +105,17 @@
   - a container can run a single web server, application service, DB Server, Message Queue Server, etc.,
 </pre>
 
+## Info - Docker - Container Application Engine 
+<pre>
+- is developed in Go lang by a company called Docker Inc
+- it follows client/server architecture
+- it comes in 2 flavours
+  1. Docker Community Edition - Docker CE
+     - open source
+     - hence no support can be expected
+  2. Docker Enterprise Edition - Docker EE
+     - requires buying commercial license
+     - hence worldwide support is offered by Docker Inc organization
+</pre>
 
 
