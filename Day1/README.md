@@ -1,4 +1,7 @@
-![image](https://github.com/user-attachments/assets/74f15b89-36a2-4248-9caf-09805f966fb1)# Day 1
+## Please share your first day feedback from RPS Cloud machine
+https://survey.zohopublic.com/zs/DkCYeg
+
+# Day 1
 
 ## Info - Hypervisor Overview
 <pre>
