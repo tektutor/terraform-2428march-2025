@@ -384,7 +384,7 @@ Expected output
 
 ## Lab - Create two rocky container to use them as ansible nodes
 ```
-docker images | grep tektutor/rocky-ansible-node:latest
+docker images | grep tektutor/rocky-ansible-node
 docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:latest
 docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:latest
 docker ps
