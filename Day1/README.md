@@ -332,7 +332,7 @@ In case you already have containers with the same name or other containers using
 docker rm -f $(docker ps -aq)
 ```
 
-If you wish to delete just one container
+If you wish to delete just specific containers
 ```
 docker rm -f ubuntu1
 docker rm -f ubuntu2
