@@ -362,5 +362,18 @@ Expected output
 ![image](https://github.com/user-attachments/assets/6feda23c-249f-491a-96f8-507159185b9e)
 ![image](https://github.com/user-attachments/assets/61d93920-745e-4542-8ef6-dd7dcc8d363b)
 
+## Lab - Building a custom rocky linux ansible node docker image to use it as an ansible node
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/CustomDockerImages/rocky
+cp ~/.ssh/id_ed25519.pub authorized_keys
+docker build -t tektutor/rocky-ansible-node:lastest .
+docker images
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/289e644b-b174-4c07-b5b8-a3494086103d)
+![image](https://github.com/user-attachments/assets/5fb40aaf-1b1f-4179-b0f9-00e26d8b912f)
 
 
