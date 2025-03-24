@@ -180,6 +180,7 @@
   1. Ansible core 
      - open source and free
      - supports only command line interface
+     - no user management, hence no role based access control
   2. Ansible Automation Platform  ( aka Ansible Tower )
      - AWX
        - open source and free
