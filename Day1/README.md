@@ -407,3 +407,14 @@ exit
 
 Expected output
 ![image](https://github.com/user-attachments/assets/c9d1fe51-be31-4158-9513-f2cd29c0ee16)
+
+## Lab - Finding IP address of ubuntu1, ubuntu2, rocky1 and rocky2 ansible nodes
+```
+docker inspect -f {{.NetworkSettings.IPAddress}} ubuntu1
+docker inspect -f {{.NetworkSettings.IPAddress}} ubuntu2
+docker inspect rocky1 | grep IPA
+docker inspect rocky2 | grep IPA
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/0f723f32-adc8-4b74-977d-a0b52f1e7a49)
