@@ -330,7 +330,7 @@ Expected output
 The below command will create two containers and starts the two containers
 ```
 docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
-docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
 ```
 
 Listing the currently running containers
