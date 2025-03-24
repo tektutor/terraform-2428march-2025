@@ -290,3 +290,14 @@
   - one to many Ansible playbooks
   - one to many Ansible Roles
 </pre>
+
+## Lab - Checking Docker and Ansible versions ( Linux Terminal )
+```
+ansible --version
+docker --version
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8b76fafb-155e-444e-94db-c33f6c3e67c7)
+![image](https://github.com/user-attachments/assets/33239ceb-ddf2-419a-9710-1b5a7f4253d0)
+                                                                                                                                                                                    
