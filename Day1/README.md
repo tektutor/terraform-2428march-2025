@@ -420,6 +420,17 @@ Expected output
 ![image](https://github.com/user-attachments/assets/0f723f32-adc8-4b74-977d-a0b52f1e7a49)
 
 ## Lab - Running ansible ad-hoc command to test the ansible node connectivity with ansible ping module
+In the below ansible ad-hoc command,
+<pre>
+i - switch indicates what follows is the name of the inventory file
+all - indicates the group of machines you wish to ping
+dev - indicates you wish to ping all the machines under dev group
+prod - indicates you wish to ping all the machines under prod group
+m - switch indicates, the module you wish to run on the ansible node/group of nodes
+ubuntu1 - indicates you wish to ping only the ubuntu1 ansible node
+rocky1 - indicates you wish to ping only the rocky1 ansible node 
+</pre>
+
 ```
 cd ~/terraform-2428march-2025
 git pull
