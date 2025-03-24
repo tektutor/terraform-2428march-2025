@@ -209,6 +209,7 @@
 - Ansible Nodes
 - Ansible Roles
 </pre>
+![Ansible](AnsibleHighLevelArchitecture.png)
 
 #### Ansible Inventory
 <pre>
