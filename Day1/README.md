@@ -392,3 +392,18 @@ docker ps
 
 Expected output
 ![image](https://github.com/user-attachments/assets/6af972dc-6c5e-4283-858b-38745529e069)
+
+
+## Lab - Let's verify if we are able to SSH into rocky1 and rocky2 ansible node containers with providing password
+```
+docker ps
+
+ssh -p 2003 root@localhost
+exit
+
+ssh -p 2004 root@localhost
+exit
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/c9d1fe51-be31-4158-9513-f2cd29c0ee16)
