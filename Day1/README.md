@@ -550,3 +550,15 @@ Expected output
   - suppress warnings, etc.,
 </pre>
 ![image](https://github.com/user-attachments/assets/fb73bfa1-6f41-4598-be56-d4922bf2f94a)
+
+## Lab - Running your first ansible playbook
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible/ansible-playbooks
+ansible-playbook ping-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/51c4950f-1746-4f9a-b652-9271b4a8ab8a)
+![image](https://github.com/user-attachments/assets/1363bc71-b5aa-43f5-9c76-aeb8be47f209)
