@@ -192,4 +192,100 @@
        - developed on top of open source AWX
        - supports web console
        - also world-wide support is provided by Red Hat ( an IBM company )
+  - configuration management tools are generally used to automate system administration activities ( like sofware installations and configurations ) on remote servers
+  - we need already provisioned machines ( Machine with OS ) to perform configuration management
+</pre>
+
+
+## Info - Ansible High-Level Architecture
+#### Ansible Jargons
+<pre>
+- Ansible Controller Machine(ACM)
+- Ansible Inventory  
+  - Static and Dynamic
+- Ansible Modules
+- Ansible Plugins
+- Ansible Collections
+- Ansible Nodes
+- Ansible Roles
+</pre>
+
+#### Ansible Inventory
+<pre>
+- it has connections details to Windows/Unix/Linux/Mac servers that must be managed by Ansible
+- for instance
+  - it has login credentials, IP address/hostnames, ports, password, public/private login authentication details, etc.,
+  - in case, the remote servers happens to have a Unix/Linux/Mac OS
+    - SSH Login credentials are captured in this file
+  - in case, the remote servers happens to have a Windows Os
+    - WinRM Login credentials are captured in this file
+</pre>
+
+#### Ansible Controller Machine (ACM)
+<pre>
+- this could be your work laptop/desktop that has Ansible installed in it
+- ansible is officially supported on any Linux Distributions ( Ubuntu, CentOS Stream, Rocky Linux, Fedora, Suse or RHEL, any other Linux Distributions )
+- Windows machine can't act as a Ansible Controller Machine
+- but Windows machines can be managed by Ansible
+</pre>  
+
+#### Ansible Nodes
+<pre>
+- are remote servers managed by Ansible Configuration Management Tool
+- Ansible nodes can be
+  - a Windows server
+  - a Unix/Linux/Mac/Network switch/router, a IOT device, etc
+  - the server could be running in a on-prem data center or public/privatte/hybrid cloud
+  - i.e can be an ec2 instance running in AWS, an Azure VM, etc.,
+  - it can be a Physical machine with some OS pre-installed in it
+- Software dependencies
+  - Windows Servers 
+    - Powershell must be installed ( comes out of the box with any Windows Server )
+    - WinRM must be configured with some login authentication ( comes out of the box with any Windows Server )
+  - Unix/Linux/Mac Server
+    - Python must be installed ( comes out of the box with any unix/linux/mac server )
+    - SSH Server must be running 
+</pre>
+
+#### Ansible Modules
+<pre>
+- Ansible modules are automation reused code either implemented as Powershell scripts or Python scripts
+- they come out of the box when we install any flavour of Ansible 
+- each Ansible modules supports one automation activity
+  - For example
+    - Copy module helps in copying a file from local machine(ACM) to remote server( Ansible Node ) or vice versa
+    - File module helps in creating/deleting a file/folder on remote machine( Ansible Node )
+    - Shell module that helps running linux shell commands on remote servers ( Ansible Unix/Linux/Mac nodes ) 
+    - Similary Ansible supports many Windows modules ( Powershell scripts ) for similar automation
+</pre>
+
+#### Ansible Plugins
+<pre>
+- plugins alter the default behavior of ansible
+- for example,
+  - in order to install/uninstall/upgrade softwares, we have to perform the automation as an Adminstrator/root user
+  - this can be achieved by an ansible plugins called become, sudo, etc.,
+  - equivalent to "Run As Administrator" in Windows
+</pre>
+
+#### Ansible Playbooks
+<pre>
+- automation code/script written in YAML file that follows a specific structure and sections
+- it invokes one or more Ansible modules, roles, plugins, etc.,
+</pre> 
+
+#### Ansible Roles
+<pre>
+- is a reusable code that can be invoked from Ansible Playbooks
+- it follows a specific directory structure and set of Best practices recommended by Ansible
+- roles can't be executed directly, they are normally invoked from Ansible Playbooks
+</pre>  
+
+#### Ansible Collections
+<pre>
+- an ansible package that has
+  - one to many Ansible plugins
+  - one to many Ansile Modules
+  - one to many Ansible playbooks
+  - one to many Ansible Roles
 </pre>
