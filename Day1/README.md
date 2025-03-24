@@ -310,10 +310,15 @@ ssh-keygen
 Expected output
 ![image](https://github.com/user-attachments/assets/ff0afb46-3904-4d4e-9e62-a89e95b190a2)
 
-
+Let's build a custom ubuntu ansible node docker image
 ```
 cd ~/terraform-2428march-2025
 git pull
 cd Day1/CustomDockerImages/ubuntu
 cp ~/.ssh/id_ed25519.pub authorized_keys
+docker build -t tektutor/ubuntu-ansible-node:latest .
+docker images
 ```
+
+Expected output
+![image](https://github.com/user-attachments/assets/15202c81-a2c6-4872-81e6-499ca0dee77f)
