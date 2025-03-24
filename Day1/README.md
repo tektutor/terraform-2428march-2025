@@ -450,3 +450,21 @@ Expected output
 ![image](https://github.com/user-attachments/assets/880010ea-c1fc-49a3-a532-61d61b93a761)
 ![image](https://github.com/user-attachments/assets/08ca28dd-a8d8-4ee9-8a05-7ab5b688fded)
 
+## Info - What happens behind the scenes when we issue ping ansible ad-hoc command
+```
+ansible -i hosts all -m ping
+```
+
+The below chain of activities happens
+<pre>
+- the below activities are done in parallel to all ansible nodes
+- ansible will create a temp directory on the Ansible Controller Machine
+- it copies the ping.py ansible module to the temp directory
+- ansible creates a temp directory on the remote ansible node
+- ansible copies the ping.py ansible module from Ansible Controller Machine(ACM) to the remote ansible nodes(s) using SCP/SFTP 
+- ansible remotes assigns execute permission to the ping.py on the ansible nodes
+- ansible runs the python script on the remote machine
+- ansible captures the output of the ping.py python script
+- ansible deletes the temp folder on the remote ansible nodes
+- ansible then gives a summary of the outcomes about all the ansible nodes
+</pre>
