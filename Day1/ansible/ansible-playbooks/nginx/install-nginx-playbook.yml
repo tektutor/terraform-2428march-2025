@@ -1,14 +1,23 @@
 - name: This playbook will install nginx in Ubuntu, configure nginx to serve html pages from custom folder and deploy custom web page
-  hosts: dev
+  hosts: all 
   vars:
   - provisioner_tool: Docker
   - conf_mgr_tool: Ansible
   - greeting_msg: Welcome to DevOps!
   tasks:
   - name: Install nginx web server into Ubuntu ansible nodes
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     apt: name=nginx state=latest update_cache=yes
 
-  - name: Start nginx web server in Ubuntu ansible nodes
+  - name: Install Extra Packages for Enterprise Linux(EPEL) in Rocky ansible nodes
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    yum: name=epel-release state=latest
+
+  - name: Install nginx web server into Rocky ansible nodes
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    yum: name=nginx state=latest 
+
+  - name: Start nginx web server in Ubuntu ansible nodes 
     service: name=nginx state=started
 
   - name: Let's create the nginx custom web root folder 
