@@ -564,6 +564,7 @@ Expected output
 ![image](https://github.com/user-attachments/assets/1363bc71-b5aa-43f5-9c76-aeb8be47f209)
 
 ## Info - Ansible Host and Group variables in Ansible Inventory
+```
 cd ~/terraform-2428march-2025
 git pull
 cd Day1/ansible
@@ -586,4 +587,4 @@ ansible-playbook install-nginx-playbook.yml
 ```
 
 Expected output
-![image](https://github.com/user-attachments/assets/918e2a6e-af06-4557-8bb3-66e5f96192f5)
+![image](https://github.com/user-attachments/assets/5e6c9763-b3b2-46d5-a3db-260aef8fc587)
