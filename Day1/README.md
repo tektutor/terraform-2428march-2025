@@ -300,4 +300,20 @@ docker --version
 Expected output
 ![image](https://github.com/user-attachments/assets/8b76fafb-155e-444e-94db-c33f6c3e67c7)
 ![image](https://github.com/user-attachments/assets/33239ceb-ddf2-419a-9710-1b5a7f4253d0)
-                                                                                                                                                                                    
+                                                                                                                                                          
+## Lab - Building our Custom Docker Images to create ansible nodes containers
+Generate public/private key pair as rps(non-admin) user,accept all defaults by hitting enter each time it prompts something
+```
+ssh-keygen
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/ff0afb46-3904-4d4e-9e62-a89e95b190a2)
+
+
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/CustomDockerImages/ubuntu
+cp ~/.ssh/id_ed25519.pub authorized_keys
+```
