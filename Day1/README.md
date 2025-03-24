@@ -587,6 +587,8 @@ ansible-playbook install-nginx-playbook.yml
 curl http://localhost:8001
 curl http://localhost:8002
 ansible ubuntu1 -m shell -a "service nginx status"
+
+cat install-nginx-playbook.yml
 ```
 
 Expected output
@@ -611,3 +613,6 @@ cat default
 ```
 ![image](https://github.com/user-attachments/assets/70e40817-102f-4995-8759-b2c3e0ee849c)
 ![image](https://github.com/user-attachments/assets/c00e87ce-3be4-4f93-8cd6-4b56d89d2b8d)
+
+The updated playbook looks as shown below
+![image](https://github.com/user-attachments/assets/d912d7a9-d7e7-49b2-8fc0-175f7ebce5ba)
