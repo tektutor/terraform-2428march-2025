@@ -324,3 +324,18 @@ Expected output
 ![image](https://github.com/user-attachments/assets/15202c81-a2c6-4872-81e6-499ca0dee77f)
 ![image](https://github.com/user-attachments/assets/fdab8801-9ae0-4c6e-957d-dd374d57ed38)
 ![image](https://github.com/user-attachments/assets/a7bc08a1-3992-424f-a5e6-4de53146bab9)
+
+## Lab - Let's create two containers using the Custom ubuntu ansible node image we build in the previous exercise
+
+The below command will create two containers and starts the two containers
+```
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+```
+
+Listing the currently running containers
+```
+docker ps
+```
+
+Expected output
