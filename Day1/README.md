@@ -136,3 +136,59 @@
   - Ansible
 </pre>
 
+## Info - Puppet 
+<pre>
+- is a configuration management tool
+- this is one of the oldest configuration management tool
+- developed and maintained by a company called Perforce
+- comes in 2 flavours
+  1. Community Edition ( Free )
+  2. Enterprise Edition ( requires commercial license ) 
+- Domain Specific Language (DSL)
+  - the language in which we write the automation script
+  - uses Puppet's proprietary language to write the automation scripts
+- follows client/server architecture ( based on Pull based architecture )
+- software installation procedure is time consuming
+- learning curve is also very steep
+- each machine ( server ) managed by Puppet should have a Puppet agent running
+</pre>
+
+## Info - Chef
+<pre>
+- is a configuration management tool
+- software installation procedure is time consuming
+- learning curve is also very steep
+- DSL used is Ruby scripting language
+- follows client/server architecture ( based on Pull based architecture just like Puppet )
+- each machine ( server ) managed by Chef should have a Chef agent running
+- Chef comes with many tools for specialized automation purpose, hence mastering all these tools is very difficult
+- comes in 2 flavours
+  - a Free community edition with no support
+  - a Paid Enterprise product with world-wide support
+</pre>
+
+## Info - Ansible
+<pre>
+- is developed in Python language by a company called Ansible Inc
+- Ansible Inc company is founded by Michael Deehan
+- Michael Deehan was an x employee of Red Hat
+- easy to install and easy to learn 
+- uses a very simple architecture
+- agent-less
+- uses YAML as the DSL
+- comes in 2 flavours
+  1. Ansible core 
+     - open source and free
+     - supports only command line interface
+  2. Ansible Automation Platform  ( aka Ansible Tower )
+     - AWX
+       - open source and free
+       - is developed on top of open source Ansible core
+       - supports web console
+       - no support
+     - Red Hat Ansible Automation Platform 
+       - an enterprise product that requires commercial license
+       - developed on top of open source AWX
+       - supports web console
+       - also world-wide support is provided by Red Hat ( an IBM company )
+</pre>
