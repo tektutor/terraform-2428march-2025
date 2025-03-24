@@ -374,7 +374,7 @@ cd ~/terraform-2428march-2025
 git pull
 cd Day1/CustomDockerImages/rocky
 cp ~/.ssh/id_ed25519.pub authorized_keys
-docker build -t tektutor/rocky-ansible-node:lastest .
+docker build -t tektutor/rocky-ansible-node:latest .
 docker images
 ```
 
@@ -382,4 +382,12 @@ Expected output
 ![image](https://github.com/user-attachments/assets/289e644b-b174-4c07-b5b8-a3494086103d)
 ![image](https://github.com/user-attachments/assets/5fb40aaf-1b1f-4179-b0f9-00e26d8b912f)
 
+## Lab - Create two rocky container to use them as ansible nodes
+```
+docker images | grep tektutor/rocky-ansible-node:latest
+docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:latest
+docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:latest
+docker ps
+```
 
+Expected output
