@@ -469,9 +469,10 @@ The below chain of activities happens
 - ansible then gives a summary of the outcomes about all the ansible nodes
 </pre>
 
-## Lab - Collecting facts using ansible setup module
+## Lab - Collecting facts using ansible setup module using an ad-hoc command
 <pre>
-- ansible facts are meta-data about remote ansible nodes
+- ansible ad-hoc command helps invoking one ansible module at a time to try the module before using them in ansible playbooks
+- ansible facts are meta-data about remote ansible nodes  
 - some intersting facts ansible collects are
   - machine hard details
   - python version
