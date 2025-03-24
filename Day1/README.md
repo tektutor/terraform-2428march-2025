@@ -577,6 +577,16 @@ cat hosts-refactored
 - group variables can also be defined for each groups in the inventory file
 </pre>
 
+## Info - Ansible Idempotency Property
+<pre>
+- The DevOps engineer when they write an ansible playbook to put the ansible node into a desired state
+- When ansible executes the playbook, it invokes the ansible modules, certain ansible modules are idempotent while others are not
+- Whichever ansible module is idempotent, it will check the current state of the machine and compares that with the expected(desired) state of the machine, if the current state of the machine matches with the desired state then ansible will do nothing.  It simply reports the task as success with green color
+- In case ansible finds the machine's current state is different from the desired state then ansible performs the necessary actions to ensure the current state of the machines matches the desired state and reports the status in Yellow color indicates it had to run the task and modify the machine in order to make it successful
+- Subsequent executions, the current state of the machine when it matches the desired state it would simple report success with no change using green color
+- this property is called Idempotency or Itempotent
+</pre>
+
 ## Lab - Install nginx web server into Ubuntu ansible nodes using an ansible playbook
 ```
 cd ~/terraform-2428march-2025
@@ -616,3 +626,15 @@ cat default
 
 The updated playbook looks as shown below
 ![image](https://github.com/user-attachments/assets/d912d7a9-d7e7-49b2-8fc0-175f7ebce5ba)
+
+Let's run the playbook
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day1/ansible/ansible-playbooks/nginx
+cat install-nginx-playbook.yml
+ansible-playbook install-nginx-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/e1f8d2d3-d897-4eb3-8c9e-9d5faedc4fce)
