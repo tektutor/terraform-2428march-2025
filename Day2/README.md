@@ -501,6 +501,10 @@ Relogin as 'jegan' user
 sudo apt install -y python3-pip
 pip install ansible-tower-cli --break-system-packages
 ```
+Expected output
+![image](https://github.com/user-attachments/assets/09560a8c-2859-4403-bc7a-c8143cc57c9b)
+![image](https://github.com/user-attachments/assets/97d11f86-d67d-4860-a2ce-1da5af683164)
+![image](https://github.com/user-attachments/assets/42c8fd0f-b187-48da-bc70-2c748b6b6d40)
 
 ## Lab - Using tower-cli
 ```
