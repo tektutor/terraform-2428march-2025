@@ -327,6 +327,32 @@ Click "Save"
 Click "Save"
 ![image](https://github.com/user-attachments/assets/3a569d8d-efd7-480e-bd09-2d64f98a07a7)
 
+## Lab - Creating Credentials in Ansible AWX to provide private key details 
+Navigate to your Ansible AWX Dashboard
+![image](https://github.com/user-attachments/assets/62fba8a8-0fde-44b0-9188-4ae3efddbb43)
+
+Under Resource menu on the left side, click on "Credentials"
+![image](https://github.com/user-attachments/assets/463e422e-920d-4ffb-8216-232a346063cc)
+Click "Add"
+![image](https://github.com/user-attachments/assets/1f68e537-2b59-4d76-b321-7fe4325383df)
+![image](https://github.com/user-attachments/assets/8248ea32-3121-4591-be87-6e93fb589061)
+Under "Credential Type" search for Machine
+![image](https://github.com/user-attachments/assets/88f0ff5f-95a8-4fbf-a469-119decef5468)
+From terminal, cat your private key file
+```
+cat ~/.ssh/id_ed25519
+```
+![image](https://github.com/user-attachments/assets/542515d8-0b71-4c56-88d5-07ab572d2c56)
+Copy as shown below
+![image](https://github.com/user-attachments/assets/6ada258f-7a9c-4477-98bd-dea92d53ede4)
+Under the SSH Private Key, you need to paste the private key you copied from your terminal
+![image](https://github.com/user-attachments/assets/3b48b6b7-0a04-42f5-8317-41258f1412eb)
+![image](https://github.com/user-attachments/assets/832dd2e8-e215-4b97-a4f3-9bef44e33bb7)
+Scroll down
+![image](https://github.com/user-attachments/assets/7a42b84f-96f6-4e87-91aa-eb715e8a91b3)
+Click "Save"
+![image](https://github.com/user-attachments/assets/cb36db0d-9156-443b-af44-40b8568eb7d4)
+
 
 ## Lab - Creating Project in Ansible AWX
 Navigate to your Ansible AWX Dashboard
