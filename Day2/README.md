@@ -176,7 +176,8 @@ Expected output
 ## Info - Red Hat Ansible Automation Platform
 <pre>
 - this is an enterprise product developed by Red Hat on top of opensource AWX
-- this product supports webconsole
+- AWX is an opensource product that is developed on top of opensource Ansible core
+- as AWX supports webconsole, Red Hat Ansibe Automation Platform also supports webconsole
 - can invoke existing ansible playbooks
-
+- supports RBAC(Role Based Access Control - User Management)
 </pre>
