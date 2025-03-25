@@ -518,7 +518,12 @@ tower-cli config verify_ssl false
 tower-cli config
 
 tower-cli project list
+tower-cli job list
 tower-cli job launch --job-template=9
 ```
 
-![image](https://github.com/user-attachments/assets/e710b44c-22fd-4d98-ba75-367598df010b)
+![image](https://github.com/user-attachments/assets/c9b2ce85-5f44-448e-b2f0-83d934ef41c2)
+![image](https://github.com/user-attachments/assets/b5613fb3-b63b-448c-bb89-dcd4cc70b925)
+![image](https://github.com/user-attachments/assets/b3ab157e-1b86-4e25-8ccb-1baf56a77d0f)
+![image](https://github.com/user-attachments/assets/c8996fb1-85d9-4e80-ae12-b7cd389f0ded)
+![image](https://github.com/user-attachments/assets/296b4052-bcd4-46d5-92e0-1e7f29b6b6c8)
