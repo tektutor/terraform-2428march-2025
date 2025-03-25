@@ -471,3 +471,11 @@ Select the checkbox "Read" and "Use"
 Click "Save"
 ![image](https://github.com/user-attachments/assets/0d390a01-1abd-4468-9b24-00a53aa76e3c)
 ![image](https://github.com/user-attachments/assets/ecc8d4db-efb6-4614-958e-ee4d46e19d35)
+
+Logout from "admin" and Login as 'jegan"(your new user)
+![image](https://github.com/user-attachments/assets/826d2205-ca05-45ec-a538-00684ce543e3)
+![image](https://github.com/user-attachments/assets/f32bc050-d00c-4f16-abf0-717acb37affb)
+![image](https://github.com/user-attachments/assets/444c6f57-40d3-4b59-9df3-b6285425aac5)
+![image](https://github.com/user-attachments/assets/12358ce5-6943-4237-bc94-9d2e454dd923)
+![image](https://github.com/user-attachments/assets/76769491-3cbc-4e08-ac75-64cd07d8c8e6)
+
