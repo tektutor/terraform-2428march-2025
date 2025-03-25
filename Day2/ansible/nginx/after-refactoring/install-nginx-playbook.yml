@@ -1,0 +1,12 @@
+- name: This playbook will install nginx in Ubuntu, configure nginx to serve html pages from custom folder and deploy custom web page
+  hosts: all 
+  vars:
+  - provisioner_tool: Docker
+  - conf_mgr_tool: Ansible
+  - greeting_msg: Welcome to DevOps!
+  tasks:
+  - include_tasks: "install-nginx-{{ansible_distribution|lower}}.yml"
+  - include_tasks: "start-nginx-{{ansible_distribution|lower}}.yml"
+  - include_tasks: "configure-nginx-{{ansible_distribution|lower}}.yml"
+  - include_tasks: "restart-nginx-{{ansible_distribution|lower}}.yml"
+  - include_tasks: common-nginx-tasks.yml
