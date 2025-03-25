@@ -411,5 +411,12 @@ Click "Save"
 Click "Launch" button to run the playbook
 ![image](https://github.com/user-attachments/assets/1241d7d0-85ff-45e2-880d-649ca8ea6e11)
 ![image](https://github.com/user-attachments/assets/e04a5760-95c5-4eec-8b74-63a5282790a1)
+![image](https://github.com/user-attachments/assets/cb1ec154-5793-4de8-905e-d96d66f2c88c)
+![image](https://github.com/user-attachments/assets/c9d6e740-e86f-49d1-af5f-3edea6c78010)
+![image](https://github.com/user-attachments/assets/907037ec-30ce-4b1d-84c7-4c98d3ea1a38)
+![image](https://github.com/user-attachments/assets/4591687c-2588-4d97-a78c-9e1b4fd7c7d4)
+![image](https://github.com/user-attachments/assets/a691273a-ae5c-4647-9dba-28d061066dc9)
+![image](https://github.com/user-attachments/assets/c4ff6e0d-1412-4255-a999-9237f5b60c72)
+![Uploading image.png…]()
 
 
