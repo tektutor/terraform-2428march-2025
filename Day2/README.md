@@ -510,11 +510,15 @@ Expected output
 ```
 export PATH=$PATH:/home/rps/.local/bin
 
-tower-cli config host http://192.168.49.2.31225
+tower-cli config host http://192.168.49.2:31225
 tower-cli config username admin
 tower-cli config password replace-with-your-admin-password
 tower-cli config verify_ssl false
+
+tower-cli config
+
 tower-cli project list
 tower-cli job launch --job-template=9
-
 ```
+
+![image](https://github.com/user-attachments/assets/e710b44c-22fd-4d98-ba75-367598df010b)
