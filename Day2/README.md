@@ -89,6 +89,7 @@ ansible-galaxy init nginx
 tree nginx
 ```
 ![image](https://github.com/user-attachments/assets/5da024d5-bfbd-407c-84b1-551b90b8ac6d)
+![image](https://github.com/user-attachments/assets/c494c820-7931-4fa8-b7fb-5fd541524231)
 
 Note
 <pre>
@@ -102,3 +103,20 @@ tasks - will contain all the tasks we normally write in an ansible playbook
 templates - template module picks the files we mention under src attribute from this folder
 tests - contains a test inventory and test playbook to demonstrate how one could invoke ansible role ( we are going to delete this)
 </pre>
+
+Running the ansible playbook that invokes our custom nginx ansible role
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day2/ansible/ansible-custom-role
+cat install-nginx-playbook.yml
+ansible-playbook install-nginx-playbook
+```
+Expected output
+![image](https://github.com/user-attachments/assets/ab43eec8-85ac-4d53-810b-7cb19cb80ef3)
+![image](https://github.com/user-attachments/assets/d91cd1b7-7c79-4dbb-973f-6298d403c22f)
+![image](https://github.com/user-attachments/assets/7040a06a-5877-4ab6-ba93-e11619565c09)
+![image](https://github.com/user-attachments/assets/006de241-26cc-4fd1-b90d-63986fc82691)
+![image](https://github.com/user-attachments/assets/df24a62f-c71d-403c-bf3d-a21f7b5fb959)
+![image](https://github.com/user-attachments/assets/2905a51e-55b8-4a83-b577-aedb23f925a4)
+![image](https://github.com/user-attachments/assets/4256e0ff-1587-47cf-b141-80a25c313438)
