@@ -426,4 +426,24 @@ Click "Launch" button to run the playbook
 ![image](https://github.com/user-attachments/assets/c4ff6e0d-1412-4255-a999-9237f5b60c72)
 ![image](https://github.com/user-attachments/assets/d2961f28-6211-4af8-bbc9-dbb7377c8de4)
 
+## Lab - Creating a non-non admin user in AWX
+Navigate to AWX Dashboard
+![image](https://github.com/user-attachments/assets/989f0e73-ec6c-4db0-a377-ffc418e7d871)
+
+Under Access menu in the left side, select "Users"
+![image](https://github.com/user-attachments/assets/4966273e-b13e-4c97-b454-acb3c72ee2dc)
+Click "Add"
+![image](https://github.com/user-attachments/assets/763cbbaa-2552-42fc-8219-dece80640343)
+![image](https://github.com/user-attachments/assets/9391e91a-c015-404d-a5d2-e2d365d04079)
+Click "Save"
+![image](https://github.com/user-attachments/assets/ec7c7125-15e3-4d5d-be39-0dc32351d0b5)
+Logout from AWX
+
+Login as the new user you created
+![image](https://github.com/user-attachments/assets/f564e272-23cd-4531-95a0-3c94e41d6f28)
+![image](https://github.com/user-attachments/assets/93915477-5bfb-41fa-952e-36a79b471bc7)
+![image](https://github.com/user-attachments/assets/88a4e543-3139-43ea-b926-d1cb33dda9b4)
+![image](https://github.com/user-attachments/assets/f7756cee-b1b2-46f3-8e60-86212c8756b7)
+![image](https://github.com/user-attachments/assets/86227194-fc51-40c6-ad0d-8f3bc88a3228)
+![image](https://github.com/user-attachments/assets/605bacdc-06b2-43ac-aa56-c2638a066f71)
 
