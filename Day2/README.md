@@ -528,3 +528,44 @@ tower-cli job launch --job-template=9
 ![image](https://github.com/user-attachments/assets/c8996fb1-85d9-4e80-ae12-b7cd389f0ded)
 ![image](https://github.com/user-attachments/assets/296b4052-bcd4-46d5-92e0-1e7f29b6b6c8)
 ![image](https://github.com/user-attachments/assets/4b09b381-a6b3-42d8-a28e-f80e3523810f)
+
+## Info - Go Programming Language Overview
+<pre>
+- is a programming language developed in C by Google
+- later the go lang is recompiled/redeveloped in Go lang
+- syntax wise, it is more or less similar to C Programming language
+- also called as Golang
+- golang design philosophy is to
+  - keep it simple, hence it supports a total of just 25 keywords
+  - loops - only for loop is supported
+  - there are no class, only struct is supported to define user-defined data-type
+  - supports pointers but manages memory using garbage collector
+- golang supports the below basic data-types
+  - bool
+  - string
+  - int, int8, int16, int32 and int64
+  - uint, unit8, uint16, uint32, uintptr
+  - byte ( alias of uint8 )
+  - float32, float64( equivalent to double in most programming languages )
+  - complex64, complex128
+- it is a statically typed programming language
+  - meaning, every variable must be declared before using it
+- strongly typed
+  - once a variable is declared as int, it will remain as integer throught the life-time of the application
+- golang supports garbage collection
+- some of the tools developed in golang
+  - can be used to develop normal desktop applications, system utilities, compilers, interpreters, web application, AI 
+  - Docker, Kubernetes, OpenShift, Terraform, DropBox, etc.,
+- it is faster than most compiled languages
+  - faster than .Net, Java, etc.,
+  - equivalent to C/C++ in terms of performance
+- Editor recommended to develop golang is Microsoft's Visual Studio code
+- Vim editor also works fine if you are comfortable 
+</pre>
+
+## Lab - Checking if go is installed in your lab machine
+```
+go version
+```
+
+Expected output
