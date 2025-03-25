@@ -152,7 +152,7 @@ ansible-vault decrypt mysql-login-credentials.yml
 cat mysql-login-credentials.yml
 ansible-vault encrypt mysql-login-credentials.yml
 cat playbook.yml
-ansible-playbook access-vault-protected-data-from-playbook.yml --ask-vault-pass
+ansible-playbook playbook.yml --ask-vault-pass
 ```
 
 Expected output
