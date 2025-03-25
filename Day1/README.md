@@ -1,6 +1,3 @@
-## Please share your first day feedback from RPS Cloud machine
-https://survey.zohopublic.com/zs/DkCYeg
-
 # Day 1
 
 ## Info - Hypervisor Overview
