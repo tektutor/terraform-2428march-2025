@@ -495,3 +495,22 @@ Relogin as 'jegan' user
 ![image](https://github.com/user-attachments/assets/b16cbfa7-b797-4a78-a9f9-fed32e3c3230)
 ![image](https://github.com/user-attachments/assets/fb0c275c-7fa6-4495-9c90-a66fdba54edb)
 ![image](https://github.com/user-attachments/assets/983125e4-e53d-4990-ab73-b1a1425ec51c)
+
+## Lab - Installing tower command line tool
+```
+sudo apt install -y python3-pip
+pip install ansible-tower-cli --break-system-packages
+```
+
+## Lab - Using tower-cli
+```
+export PATH=$PATH:/home/rps/.local/bin
+
+tower-cli config host http://192.168.49.2.31225
+tower-cli config username admin
+tower-cli config passowrd replace-with-your-admin-password
+tower-cli config verify_ssl false
+tower-cli project list
+tower-cli job launch --job-template=9
+
+```
