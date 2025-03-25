@@ -139,6 +139,13 @@ Expected output
 ## Lab - Securing sensitive data using ansible vault and using them in ansible playbook
 
 When ansible-playbook prompts for password, type root as the password.
+
+You need to create the ~/.my-vault-password as shown below
+```
+echo root > ~/.my-vault-password
+```
+
+Now you may proceed with the below commands
 ```
 cd ~/terraform-2428march-2025
 git pull
@@ -165,3 +172,11 @@ Expected output
 ![image](https://github.com/user-attachments/assets/916653c0-053e-4c0d-b00b-e859d0526964)
 ![image](https://github.com/user-attachments/assets/c0f4d957-5426-450e-85b7-8cc69c710ebb)
 ![image](https://github.com/user-attachments/assets/aed65dcf-c424-47d4-bd3b-65b9746adcc4)
+
+## Info - Red Hat Ansible Automation Platform
+<pre>
+- this is an enterprise product developed by Red Hat on top of opensource AWX
+- this product supports webconsole
+- can invoke existing ansible playbooks
+
+</pre>
