@@ -58,3 +58,24 @@ Expected output
 ![image](https://github.com/user-attachments/assets/3aaf4f70-ec25-4802-a809-3ed908bbfe4b)
 ![image](https://github.com/user-attachments/assets/ec02f55a-64b3-495a-81e7-00116405d60c)
 
+## Info - Ansible tools
+<pre>
+ansible - used to run ansible ad-hoc command ( invoking a single ansible module without writing an ansible playbook )
+ansible-playbook - used to run ansible playbooks ( end to end automation that invokes multiple ansible modules )
+ansible-doc - used to get help about any ansible module(s)
+ansible-galaxy - used to download/install/develop custom ansible roles
+</pre>
+
+## Info - Ansible Role
+<pre>
+- ansible roles helps write reusable code
+- ansible roles are like Dynamic Link Library with reusable functions
+- just like we can't run the DLL directory, we can't run the ansible roles directly
+- just like DLL are loaded in application, after dynamically loading & linking functions from DLL application is able to invoke the functions defined in the DLL, same way ansible playbooks can invoke the ansible roles
+- For what all purpose we could develop Ansible Role
+  - let's say you wish to install nginx in multiple Linux distributions, you could develop a custom nginx role
+  - let's say you wish to install weblogic in multiple OS ( Linux, Windows & Mac ) you could develop a custom weblogic role
+  - let's say you wish to install Kubernetes in multiple OS ( Many Linux Distributions ), this could developed as a kubernetes role
+- Ansible roles would look like an Ansible Playbook, but it can't be run directly, can only be invoked from Ansible Playbooks
+- it follows specific recommended folder structures and many Ansible best practices
+</pre>
