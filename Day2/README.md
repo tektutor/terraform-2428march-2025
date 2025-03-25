@@ -447,3 +447,27 @@ Login as the new user you created
 ![image](https://github.com/user-attachments/assets/86227194-fc51-40c6-ad0d-8f3bc88a3228)
 ![image](https://github.com/user-attachments/assets/605bacdc-06b2-43ac-aa56-c2638a066f71)
 
+Logout from new user and relogin as admin user to provide access to the new user you created.
+![image](https://github.com/user-attachments/assets/306e4384-18a0-42db-9de7-0a74495e2f61)
+![image](https://github.com/user-attachments/assets/6e8677b6-e71a-4146-adaf-192ac01325dd)
+Click "Projects"
+![image](https://github.com/user-attachments/assets/e22f2be1-bf9f-405b-862b-ef2ec20f4139)
+Select "Install Nginx Playbook"
+![image](https://github.com/user-attachments/assets/aafe47d4-fe74-48be-a6cf-78df9503e606)
+Switch to "Access" tab( I'm not referring the menu on left side )
+![image](https://github.com/user-attachments/assets/c36b524b-3c4c-43e5-9134-31ef7c428b6c)
+Click "Add"
+![image](https://github.com/user-attachments/assets/aea129f4-0af9-4bde-bdc8-28fa92f966af)
+Select "Users"
+![image](https://github.com/user-attachments/assets/7a3b9e7d-594e-4b0c-bc0a-d920fa7e9d7a)
+Click "Next"
+![image](https://github.com/user-attachments/assets/d839e9c2-17a6-485f-82f0-9fe883363249)
+Select your new user ( in my case 'jegan' )
+![image](https://github.com/user-attachments/assets/7246bf89-494f-4fca-a4cf-51d270528b61)
+Click "Next" button
+![image](https://github.com/user-attachments/assets/3e5e5156-d8f5-4812-96ab-9ea9fc68fe5a)
+Select the checkbox "Read" and "Use"
+![image](https://github.com/user-attachments/assets/57330b5f-6918-4c6d-801a-31fc14d5caf6)
+Click "Save"
+![image](https://github.com/user-attachments/assets/0d390a01-1abd-4468-9b24-00a53aa76e3c)
+![image](https://github.com/user-attachments/assets/ecc8d4db-efb6-4614-958e-ee4d46e19d35)
