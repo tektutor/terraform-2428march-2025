@@ -258,7 +258,7 @@ Access the AWX dashboard
 kubectl create -f awx-ubuntu.yml -n ansible-awx
 kubectl get pods -n ansible-awx
 kubectl get svc -n ansible-awx
-minikube service awx-ubuntu-service --url -n ansible-awx
+minikube service awx-demo-service --url -n ansible-awx
 ```
 Expected output
 AWX Login Credentials
@@ -268,8 +268,7 @@ username - admin
 
 To retrieve password
 ```
-kubectl get secret -n ansible-awx | grep -i password
-kubectl get secret awx-ubuntu-admin-password -o jsonpath="{.data.password}" -n ansible-awx | base64 --decode; echo
+kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" -n ansible-awx | base64 --decode; echo
 ```
 
 If everything went smooth, you are expected to see similar page
