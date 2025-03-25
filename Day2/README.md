@@ -512,7 +512,7 @@ export PATH=$PATH:/home/rps/.local/bin
 
 tower-cli config host http://192.168.49.2.31225
 tower-cli config username admin
-tower-cli config passowrd replace-with-your-admin-password
+tower-cli config password replace-with-your-admin-password
 tower-cli config verify_ssl false
 tower-cli project list
 tower-cli job launch --job-template=9
