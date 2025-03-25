@@ -417,6 +417,6 @@ Click "Launch" button to run the playbook
 ![image](https://github.com/user-attachments/assets/4591687c-2588-4d97-a78c-9e1b4fd7c7d4)
 ![image](https://github.com/user-attachments/assets/a691273a-ae5c-4647-9dba-28d061066dc9)
 ![image](https://github.com/user-attachments/assets/c4ff6e0d-1412-4255-a999-9237f5b60c72)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/d2961f28-6211-4af8-bbc9-dbb7377c8de4)
 
 
