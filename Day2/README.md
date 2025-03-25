@@ -109,7 +109,8 @@ Running the ansible playbook that invokes our custom nginx ansible role
 ```
 cd ~/terraform-2428march-2025
 git pull
-cd Day2/ansible/ansible-custom-role
+cd Day2/ansible/ansible-custom-rolkubectl get pods -n ansible-awx
+e
 cat install-nginx-playbook.yml
 ansible-playbook install-nginx-playbook.yml
 ```
@@ -243,15 +244,17 @@ kubectl get pods -n ansible-awx
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/df848ac8-be68-4e5e-8f43-092fffcd5d4f)
 
 Track the progress of awx installation
 ```
 kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager -n ansible-awx
 ```
+Expected output
+
 
 Access the AWX dashboard
 ```
-cp awx-demo.yml awx-ubuntu.yml
 kubectl create -f awx-ubuntu.yml -n ansible-awx
 kubectl get pods -n ansible-awx
 kubectl get svc -n ansible-awx
