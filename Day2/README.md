@@ -260,7 +260,7 @@ Click "Save"
 ![image](https://github.com/user-attachments/assets/11ad4b03-02eb-42e9-a9f8-6000b308ceef)
 ![image](https://github.com/user-attachments/assets/3a70080e-c2a5-424d-bab4-2b3a29c2ea50)
 Click "Save"
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/3a569d8d-efd7-480e-bd09-2d64f98a07a7)
 
 
 ## Lab - Creating Project in Ansible AWX
