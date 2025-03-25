@@ -79,3 +79,26 @@ ansible-galaxy - used to download/install/develop custom ansible roles
 - Ansible roles would look like an Ansible Playbook, but it can't be run directly, can only be invoked from Ansible Playbooks
 - it follows specific recommended folder structures and many Ansible best practices
 </pre>
+
+## Demo - Developing a custom ansible role to install nginx in Rocky and Ubuntu Linux Distributions
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day2/ansible/ansible-custom-role
+ansible-galaxy init nginx
+tree nginx
+```
+![image](https://github.com/user-attachments/assets/5da024d5-bfbd-407c-84b1-551b90b8ac6d)
+
+Note
+<pre>
+defaults - has read-only(static - which is not going change while playbook runs) user-defined variables 
+vars - has regular variables 
+files - copy ansible modules picks the files we mention under src attribute from this folder
+handlers 
+- based on notification, certain tasks can be executed on demand at run time
+- in case, you wish to restart a service once you made some config changes the config task can notify the restart handler
+tasks - will contain all the tasks we normally write in an ansible playbook
+templates - template module picks the files we mention under src attribute from this folder
+tests - contains a test inventory and test playbook to demonstrate how one could invoke ansible role ( we are going to delete this)
+</pre>
