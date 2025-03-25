@@ -58,3 +58,65 @@ Expected output
 ![image](https://github.com/user-attachments/assets/3aaf4f70-ec25-4802-a809-3ed908bbfe4b)
 ![image](https://github.com/user-attachments/assets/ec02f55a-64b3-495a-81e7-00116405d60c)
 
+## Info - Ansible tools
+<pre>
+ansible - used to run ansible ad-hoc command ( invoking a single ansible module without writing an ansible playbook )
+ansible-playbook - used to run ansible playbooks ( end to end automation that invokes multiple ansible modules )
+ansible-doc - used to get help about any ansible module(s)
+ansible-galaxy - used to download/install/develop custom ansible roles
+</pre>
+
+## Info - Ansible Role
+<pre>
+- ansible roles helps write reusable code
+- ansible roles are like Dynamic Link Library with reusable functions
+- just like we can't run the DLL directory, we can't run the ansible roles directly
+- just like DLL are loaded in application, after dynamically loading & linking functions from DLL application is able to invoke the functions defined in the DLL, same way ansible playbooks can invoke the ansible roles
+- For what all purpose we could develop Ansible Role
+  - let's say you wish to install nginx in multiple Linux distributions, you could develop a custom nginx role
+  - let's say you wish to install weblogic in multiple OS ( Linux, Windows & Mac ) you could develop a custom weblogic role
+  - let's say you wish to install Kubernetes in multiple OS ( Many Linux Distributions ), this could developed as a kubernetes role
+- Ansible roles would look like an Ansible Playbook, but it can't be run directly, can only be invoked from Ansible Playbooks
+- it follows specific recommended folder structures and many Ansible best practices
+</pre>
+
+## Demo - Developing a custom ansible role to install nginx in Rocky and Ubuntu Linux Distributions
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day2/ansible/ansible-custom-role
+ansible-galaxy init nginx
+tree nginx
+```
+![image](https://github.com/user-attachments/assets/5da024d5-bfbd-407c-84b1-551b90b8ac6d)
+![image](https://github.com/user-attachments/assets/c494c820-7931-4fa8-b7fb-5fd541524231)
+
+Note
+<pre>
+defaults - has read-only(static - which is not going change while playbook runs) user-defined variables 
+vars - has regular variables 
+files - copy ansible modules picks the files we mention under src attribute from this folder
+handlers 
+- based on notification, certain tasks can be executed on demand at run time
+- in case, you wish to restart a service once you made some config changes the config task can notify the restart handler
+tasks - will contain all the tasks we normally write in an ansible playbook
+templates - template module picks the files we mention under src attribute from this folder
+tests - contains a test inventory and test playbook to demonstrate how one could invoke ansible role ( we are going to delete this)
+</pre>
+
+Running the ansible playbook that invokes our custom nginx ansible role
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day2/ansible/ansible-custom-role
+cat install-nginx-playbook.yml
+ansible-playbook install-nginx-playbook
+```
+Expected output
+![image](https://github.com/user-attachments/assets/ab43eec8-85ac-4d53-810b-7cb19cb80ef3)
+![image](https://github.com/user-attachments/assets/d91cd1b7-7c79-4dbb-973f-6298d403c22f)
+![image](https://github.com/user-attachments/assets/7040a06a-5877-4ab6-ba93-e11619565c09)
+![image](https://github.com/user-attachments/assets/006de241-26cc-4fd1-b90d-63986fc82691)
+![image](https://github.com/user-attachments/assets/df24a62f-c71d-403c-bf3d-a21f7b5fb959)
+![image](https://github.com/user-attachments/assets/2905a51e-55b8-4a83-b577-aedb23f925a4)
+![image](https://github.com/user-attachments/assets/bf6ad431-2a0f-4f29-98c8-860b216a7244)
