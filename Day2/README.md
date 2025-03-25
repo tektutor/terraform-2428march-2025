@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/7716c29d-6667-4649-afb4-4f8cd910b42c)# Day 2
+# Day 2
 
 ## Lab - Managing Ubuntu and Rocky ansible node containers with a single ansible playbook
 ```
@@ -218,6 +218,69 @@ kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" -n ans
 ![image](https://github.com/user-attachments/assets/7b0c56d5-b3ba-4b7e-87b5-0a8cc208c2c6)
 ![image](https://github.com/user-attachments/assets/05362dfd-4f54-4651-bd27-53962ae3a3e6)
 
+## Troubleshooting - In case your ansible tower is not working, you will have to reinstall AWX
+```
+minikube delete
+minikube start
+```
+
+Check if minikube is installed properly
+```
+kubectl get nodes
+```
+
+Expected output
+
+Let's install AWX operator in minikube
+```
+sudo apt install make -y
+cd ~
+cd awx-operator/
+git checkout 2.19.0
+export NAMESPACE=ansible-awx
+make deploy
+
+kubectl get pods -n ansible-awx
+```
+
+Expected output
+
+Track the progress of awx installation
+```
+kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager -n ansible-awx
+```
+
+Access the AWX dashboard
+```
+cp awx-demo.yml awx-ubuntu.yml
+kubectl create -f awx-ubuntu.yml -n ansible-awx
+kubectl get pods -n ansible-awx
+kubectl get svc -n ansible-awx
+minikube service awx-ubuntu-service --url -n ansible-awx
+```
+Expected output
+AWX Login Credentials
+```
+username - admin
+```
+
+To retrieve password
+```
+kubectl get secret -n ansible-awx | grep -i password
+kubectl get secret awx-ubuntu-admin-password -o jsonpath="{.data.password}" -n ansible-awx | base64 --decode; echo
+```
+
+If everything went smooth, you are expected to see similar page
+
+To access the awx dashboard from other machines, you need to do port-forwarding
+```
+kubectl port-forward service/awx-ubuntu-service -n ansible-awx --address 0.0.0.0 10445:80 &> /dev/null &
+```
+
+You may now access the dashboard from other machines as
+```
+http://10.0.1.72:10445
+```
 
 ## Lab - Installing SSH Server on our lab machine
 ```
