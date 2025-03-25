@@ -214,6 +214,9 @@ To get the password, you need to type the below command
 ```
 kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" -n ansible-awx | base64 --decode; echo
 ```
+![image](https://github.com/user-attachments/assets/2cfcf13a-f4d5-49d9-8a36-ff1f261e73c7)
+![image](https://github.com/user-attachments/assets/7b0c56d5-b3ba-4b7e-87b5-0a8cc208c2c6)
+![image](https://github.com/user-attachments/assets/05362dfd-4f54-4651-bd27-53962ae3a3e6)
 
 
 ## Lab - Installing SSH Server on our lab machine
