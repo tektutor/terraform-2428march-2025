@@ -64,6 +64,7 @@ ansible - used to run ansible ad-hoc command ( invoking a single ansible module 
 ansible-playbook - used to run ansible playbooks ( end to end automation that invokes multiple ansible modules )
 ansible-doc - used to get help about any ansible module(s)
 ansible-galaxy - used to download/install/develop custom ansible roles
+ansible-vault - used to encrypt/decrypt sensitive data like login credentials, certs, etc.,
 </pre>
 
 ## Info - Ansible Role
@@ -134,3 +135,27 @@ ansible all -m ping
 Expected output
 ![image](https://github.com/user-attachments/assets/d664c231-67e9-47f2-afe6-996bbe3eb28e)
 ![image](https://github.com/user-attachments/assets/b091c14f-8a63-4148-8dc2-293e1093541d)
+
+## Lab - Securing sensitive data using ansible vault and using them in ansible playbook
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day2/ansible/vault
+ansible-vault create mysql-login-credentials.yml
+cat mysql-login-credentials.yml
+
+ansible-vault view mysql-login-credentials.yml
+ansible-vault edit mysql-login-credentials.yml
+ansible-vault decrypt mysql-login-credentials.yml
+cat mysql-login-credentials.yml
+ansible-vault encrypt mysql-login-credentials.yml
+cat playbook.yml
+ansible-playbook access-vault-protected-data-from-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/45af7b6b-e06a-48b8-8879-3d40739d572a)
+![image](https://github.com/user-attachments/assets/d39afc1a-87d7-4e03-9ede-c58c78ff37bc)
+![image](https://github.com/user-attachments/assets/81647a19-297e-4bbb-afd1-a58fa1658af3)
+![image](https://github.com/user-attachments/assets/916653c0-053e-4c0d-b00b-e859d0526964)
+![image](https://github.com/user-attachments/assets/c0f4d957-5426-450e-85b7-8cc69c710ebb)
