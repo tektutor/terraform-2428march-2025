@@ -188,10 +188,32 @@ Expected output
 minikube status
 minikube start
 minikube status
+kubectl get nodes
 ```
 
 Expected output
 ![image](https://github.com/user-attachments/assets/67770ac8-263b-4444-a9f3-3fef880f3efc)
+
+Accessing Ansible Tower Dashboard from chrome web browser on the Ubuntu lab machine
+```
+minikube service awx-demo-service --url -n ansible-awx
+```
+You can launch the AWS webconsole using the url shown in the above command
+```
+http://192.168.49.2:31225
+```
+![image](https://github.com/user-attachments/assets/ca51256e-8f4d-449f-9d35-7929f5dd9e50)
+
+Ansible Tower Login Credentials , save the login credentials in a text file to avoid typing the below command each time to get password
+<pre>
+username - admin   
+password - 
+</pre>
+
+To get the password, you need to type the below command
+```
+kubectl get secret awx-demo-admin-password -o jsonpath="{.data.password}" -n ansible-awx | base64 --decode; echo
+```
 
 ## Lab - Installing SSH Server on our lab machine
 ```
