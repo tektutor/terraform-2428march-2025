@@ -561,6 +561,12 @@ tower-cli job launch --job-template=9
   - equivalent to C/C++ in terms of performance
 - Editor recommended to develop golang is Microsoft's Visual Studio code
 - Vim editor also works fine if you are comfortable 
+- The below tools are developed in Go language
+  - Docker
+  - Kubernetes
+  - Openshift
+  - DropBox
+  - Terraform
 </pre>
 
 ## Lab - Checking if go is installed in your lab machine
