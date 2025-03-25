@@ -110,7 +110,7 @@ cd ~/terraform-2428march-2025
 git pull
 cd Day2/ansible/ansible-custom-role
 cat install-nginx-playbook.yml
-ansible-playbook install-nginx-playbook
+ansible-playbook install-nginx-playbook.yml
 ```
 Expected output
 ![image](https://github.com/user-attachments/assets/ab43eec8-85ac-4d53-810b-7cb19cb80ef3)
