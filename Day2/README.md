@@ -225,3 +225,46 @@ sudo apt update && sudo apt install -y net-tools openssh-server
 ```
 Expected output
 ![image](https://github.com/user-attachments/assets/791a0168-4695-4c82-b0f3-21f699dd499a)
+
+## Lab - Creating an inventory in Ansible AWX
+Navigate to your Ansible AWX Dashboard
+![image](https://github.com/user-attachments/assets/6cc9489c-66f8-4737-a4c5-1ee5bccb5926)
+
+Under Resources menu, select "Inventories"
+![image](https://github.com/user-attachments/assets/a761021a-b527-4f81-89ce-1ba0b4932a6c)
+Click "Add"
+![image](https://github.com/user-attachments/assets/70b1469c-453d-46cb-8542-f1804c7c9121)
+Select "Add inventory"
+![image](https://github.com/user-attachments/assets/e38e321c-9c38-4b8c-a486-670ff38e98da)
+![image](https://github.com/user-attachments/assets/e517a213-0bcf-4112-a386-373d81db471a)
+Scroll down and click "Save" button
+![image](https://github.com/user-attachments/assets/1120060e-ec9e-4525-a28a-ee12ade05c3b)
+![image](https://github.com/user-attachments/assets/123b4030-0ee8-4cd1-848e-9c2f2ae2b041)
+
+Click on "Hosts" within the MyInventory
+![image](https://github.com/user-attachments/assets/e7037654-29cd-40af-9aa7-8c1f5ae82db5)
+Click "Add"
+![image](https://github.com/user-attachments/assets/bd8dcbc5-ed0c-41aa-92d1-95c7f2a30b76)
+![image](https://github.com/user-attachments/assets/c937c0f0-3c55-4d22-ad46-e63ec8973201)
+Click "Save"
+![image](https://github.com/user-attachments/assets/06bf0dcb-2b11-4de8-a323-c420795109e7)
+![image](https://github.com/user-attachments/assets/299c7d6b-ecff-4b88-8e93-a7266939b723)
+
+Repeat this to add Ubuntu2, Rocky1 and Rocky2 anisble nodes
+![image](https://github.com/user-attachments/assets/052f90c8-0850-43bd-9b1a-c45373c3bada)
+Click "Save"
+![image](https://github.com/user-attachments/assets/93674ebb-c329-4abc-b66d-315c0b98a573)
+![image](https://github.com/user-attachments/assets/9c064212-c377-417c-bbdb-2ee0e656c9ab)
+Click "Save"
+![image](https://github.com/user-attachments/assets/23db861e-f314-4d40-8654-aae065657edd)
+![image](https://github.com/user-attachments/assets/11ad4b03-02eb-42e9-a9f8-6000b308ceef)
+![image](https://github.com/user-attachments/assets/3a70080e-c2a5-424d-bab4-2b3a29c2ea50)
+Click "Save"
+![Uploading image.png…]()
+
+
+## Lab - Creating Project in Ansible AWX
+Navigate to your Ansible AWX Dashboard
+![image](https://github.com/user-attachments/assets/6cc9489c-66f8-4737-a4c5-1ee5bccb5926)
+
+
