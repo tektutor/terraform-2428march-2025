@@ -1,6 +1,3 @@
-## Please share your first day feedback from RPS Cloud machine
-https://survey.zohopublic.com/zs/DkCYeg
-
 # Day 1
 
 ## Info - Hypervisor Overview
@@ -41,7 +38,7 @@ https://survey.zohopublic.com/zs/DkCYeg
     - Virtual Graphics Cards
 </pre>
 
-## Info - Containerization Technologydocker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+## Info - Containerization Technology
 <pre>
 - is a light weight virtualization technology
 - all the containers that runs in the same OS/machine, shares the hardware resources available on the Host OS
