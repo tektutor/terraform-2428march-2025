@@ -489,5 +489,8 @@ Relogin as 'jegan' user
 
 
 ## Lab - Schedule a Job to run every Friday
+![image](https://github.com/user-attachments/assets/6e212949-e39c-44ca-8154-d8489905d9cf)
+![image](https://github.com/user-attachments/assets/f00e8555-e3af-4965-a249-5e19c7a66919)
+![image](https://github.com/user-attachments/assets/dcf1b118-89f4-448e-af9f-51a6b818a8a0)
 ![image](https://github.com/user-attachments/assets/fb0c275c-7fa6-4495-9c90-a66fdba54edb)
 ![image](https://github.com/user-attachments/assets/983125e4-e53d-4990-ab73-b1a1425ec51c)
