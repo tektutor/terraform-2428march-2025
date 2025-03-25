@@ -233,7 +233,6 @@ Expected output
 
 Let's install AWX operator in minikube
 ```
-sudo apt install make -y
 cd ~
 cd awx-operator/
 git checkout 2.19.0
