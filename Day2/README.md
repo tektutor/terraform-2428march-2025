@@ -137,6 +137,8 @@ Expected output
 ![image](https://github.com/user-attachments/assets/b091c14f-8a63-4148-8dc2-293e1093541d)
 
 ## Lab - Securing sensitive data using ansible vault and using them in ansible playbook
+
+When ansible-playbook prompts for password, type root as the password.
 ```
 cd ~/terraform-2428march-2025
 git pull
