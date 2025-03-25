@@ -173,11 +173,23 @@ Expected output
 ![image](https://github.com/user-attachments/assets/c0f4d957-5426-450e-85b7-8cc69c710ebb)
 ![image](https://github.com/user-attachments/assets/aed65dcf-c424-47d4-bd3b-65b9746adcc4)
 
-## Info - Red Hat Ansible Automation Platform
+## Info - Red Hat Ansible Automation Platform ( a.k.a Ansible Tower in the past )
 <pre>
 - this is an enterprise product developed by Red Hat on top of opensource AWX
 - AWX is an opensource product that is developed on top of opensource Ansible core
 - as AWX supports webconsole, Red Hat Ansibe Automation Platform also supports webconsole
 - can invoke existing ansible playbooks
 - supports RBAC(Role Based Access Control - User Management)
+- Ansible AWX or Ansible Automation Platform can be installed on any Linux Distribution or within Kubernetes/Openshift
 </pre>
+
+## Lab - Launching Ansible Tower
+```
+minikube status
+minikube start
+minikube status
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/67770ac8-263b-4444-a9f3-3fef880f3efc)
+
