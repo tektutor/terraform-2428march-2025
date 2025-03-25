@@ -364,7 +364,7 @@ Click "Add"
 ![image](https://github.com/user-attachments/assets/ac2de99f-6b51-4139-8129-136facb7a746)
 Select "Git" under "Source Code Type"
 ![image](https://github.com/user-attachments/assets/faa0e713-22a6-46d0-bba3-d2026e09fea6)
-Under Source Code URL type "https://github.com/tektutor/terraform2428march-2025.git"
+Under Source Code URL type "https://github.com/tektutor/terraform-2428march-2025.git"
 ![image](https://github.com/user-attachments/assets/c102150f-7c30-4e1c-a059-e2e05b0f6e3e)
 Under the Options, select the checkbox "Update Revision on Launch"
 ![image](https://github.com/user-attachments/assets/ea958775-f594-4e3c-a09d-4a7b04042218)
