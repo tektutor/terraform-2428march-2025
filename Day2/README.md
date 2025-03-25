@@ -326,6 +326,13 @@ Click "Save"
 Click "Save"
 ![image](https://github.com/user-attachments/assets/3a569d8d-efd7-480e-bd09-2d64f98a07a7)
 
+ansible_host: localhost must be replaced with your lab machine IP address as shown below
+![image](https://github.com/user-attachments/assets/821b3aec-2fb7-4b34-9930-89399b1aa7e6)
+![image](https://github.com/user-attachments/assets/d11879ad-add4-41cb-8eda-1e6b17040e61)
+![image](https://github.com/user-attachments/assets/aa0cfcff-7f7f-409e-b95c-fb4dd503a35d)
+![image](https://github.com/user-attachments/assets/6e75177b-ee50-4f90-bdb8-06bbc8019317)
+
+
 ## Lab - Creating Credentials in Ansible AWX to provide private key details 
 Navigate to your Ansible AWX Dashboard
 ![image](https://github.com/user-attachments/assets/62fba8a8-0fde-44b0-9188-4ae3efddbb43)
