@@ -527,3 +527,4 @@ tower-cli job launch --job-template=9
 ![image](https://github.com/user-attachments/assets/b3ab157e-1b86-4e25-8ccb-1baf56a77d0f)
 ![image](https://github.com/user-attachments/assets/c8996fb1-85d9-4e80-ae12-b7cd389f0ded)
 ![image](https://github.com/user-attachments/assets/296b4052-bcd4-46d5-92e0-1e7f29b6b6c8)
+![image](https://github.com/user-attachments/assets/4b09b381-a6b3-42d8-a28e-f80e3523810f)
