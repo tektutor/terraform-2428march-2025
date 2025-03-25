@@ -193,3 +193,7 @@ minikube status
 Expected output
 ![image](https://github.com/user-attachments/assets/67770ac8-263b-4444-a9f3-3fef880f3efc)
 
+## Lab - Installing SSH Server on our lab machine
+```
+sudo apt update && sudo apt install -y net-tools openssh-server
+```
