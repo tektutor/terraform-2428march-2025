@@ -1,0 +1,4 @@
+- name: This playbook will install nginx, configure nginx and deploy custom web page using our custom nginx role
+  hosts: all
+  roles:
+  - nginx
