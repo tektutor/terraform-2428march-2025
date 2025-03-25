@@ -479,3 +479,15 @@ Logout from "admin" and Login as 'jegan"(your new user)
 ![image](https://github.com/user-attachments/assets/12358ce5-6943-4237-bc94-9d2e454dd923)
 ![image](https://github.com/user-attachments/assets/76769491-3cbc-4e08-ac75-64cd07d8c8e6)
 
+You can give access to run the Job Template to 'jegan' user as an Administrator
+![image](https://github.com/user-attachments/assets/a275b9f4-4840-454f-999a-5ba7f00de51e)
+
+Relogin as 'jegan' user
+![image](https://github.com/user-attachments/assets/b58cb8be-013a-4e7b-a024-aa75d4a43db3)
+![image](https://github.com/user-attachments/assets/66b5046e-e6de-4abb-ad98-e8117bb5f50b)
+![image](https://github.com/user-attachments/assets/4e35af94-4c61-4dd7-a5c9-1c966084c2ad)
+
+
+## Lab - Schedule a Job to run every Friday
+![image](https://github.com/user-attachments/assets/fb0c275c-7fa6-4495-9c90-a66fdba54edb)
+![image](https://github.com/user-attachments/assets/983125e4-e53d-4990-ab73-b1a1425ec51c)
