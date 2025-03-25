@@ -1,4 +1,4 @@
-# Day 2
+![image](https://github.com/user-attachments/assets/7716c29d-6667-4649-afb4-4f8cd910b42c)# Day 2
 
 ## Lab - Managing Ubuntu and Rocky ansible node containers with a single ansible playbook
 ```
@@ -137,6 +137,8 @@ Expected output
 ![image](https://github.com/user-attachments/assets/b091c14f-8a63-4148-8dc2-293e1093541d)
 
 ## Lab - Securing sensitive data using ansible vault and using them in ansible playbook
+
+When ansible-playbook prompts for password, type root as the password.
 ```
 cd ~/terraform-2428march-2025
 git pull
@@ -150,7 +152,10 @@ ansible-vault decrypt mysql-login-credentials.yml
 cat mysql-login-credentials.yml
 ansible-vault encrypt mysql-login-credentials.yml
 cat playbook.yml
-ansible-playbook access-vault-protected-data-from-playbook.yml
+ansible-playbook playbook.yml --ask-vault-pass
+cat ansible.cfg
+cat ~/.my-vault-password
+ansible-playbook playbook.yml
 ```
 
 Expected output
@@ -159,3 +164,4 @@ Expected output
 ![image](https://github.com/user-attachments/assets/81647a19-297e-4bbb-afd1-a58fa1658af3)
 ![image](https://github.com/user-attachments/assets/916653c0-053e-4c0d-b00b-e859d0526964)
 ![image](https://github.com/user-attachments/assets/c0f4d957-5426-450e-85b7-8cc69c710ebb)
+![image](https://github.com/user-attachments/assets/aed65dcf-c424-47d4-bd3b-65b9746adcc4)
