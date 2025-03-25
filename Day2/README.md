@@ -110,7 +110,7 @@ cd ~/terraform-2428march-2025
 git pull
 cd Day2/ansible/ansible-custom-role
 cat install-nginx-playbook.yml
-ansible-playbook install-nginx-playbook
+ansible-playbook install-nginx-playbook.yml
 ```
 Expected output
 ![image](https://github.com/user-attachments/assets/ab43eec8-85ac-4d53-810b-7cb19cb80ef3)
@@ -120,3 +120,17 @@ Expected output
 ![image](https://github.com/user-attachments/assets/df24a62f-c71d-403c-bf3d-a21f7b5fb959)
 ![image](https://github.com/user-attachments/assets/2905a51e-55b8-4a83-b577-aedb23f925a4)
 ![image](https://github.com/user-attachments/assets/bf6ad431-2a0f-4f29-98c8-860b216a7244)
+
+## Lab - Ansible Dynamic Inventory
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day2/ansible/dynamic-inventory
+cat ansible.cfg
+./inventory
+ansible all -m ping
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/d664c231-67e9-47f2-afe6-996bbe3eb28e)
+![image](https://github.com/user-attachments/assets/b091c14f-8a63-4148-8dc2-293e1093541d)
