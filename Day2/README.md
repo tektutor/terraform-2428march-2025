@@ -379,4 +379,37 @@ Progress
 ![image](https://github.com/user-attachments/assets/861619bc-66f3-4d7f-b95d-899685b0c317)
 ![image](https://github.com/user-attachments/assets/24cf2363-3966-45e1-a3c7-274368b476d6)
 
+## Lab - Creating a Job Template to run Ansible Playbook in Ansible Automation Platform
+Navigate to your Ansible AWX Dashboard
+![image](https://github.com/user-attachments/assets/66e18ae8-f133-4db4-8d66-b210759f348a)
+
+Under Resources menu in the left side, select "Templates"
+![image](https://github.com/user-attachments/assets/be2ef159-cd72-466f-8ac8-183da9e02596)
+Click "Add"
+![image](https://github.com/user-attachments/assets/69dd5b1b-dc37-438d-bfeb-e5c86ac5e90f)
+Select "Add Job Template"
+![image](https://github.com/user-attachments/assets/f150c744-feed-4af4-9988-03cf84627337)
+Click the Search option under Inventory and Select "MyInventory" and click "Select" button
+![image](https://github.com/user-attachments/assets/ba737779-9413-4ff0-844a-57705d5b658e)
+Click the Search option under Project and Select "Install Nginx Playbook"
+![image](https://github.com/user-attachments/assets/e72df0ab-18ed-4368-8475-8b1dd77cc692)
+Click "Select" button
+![image](https://github.com/user-attachments/assets/ae413b5a-94b1-4593-b426-da0f3ca7531d)
+Click "Search" button under Credentials and Select "PrivateKey"
+![image](https://github.com/user-attachments/assets/4dfd5fdb-4717-4fad-b626-c1ea54d70aa5)
+Click "Select" button
+![image](https://github.com/user-attachments/assets/2f4e41eb-69b8-4565-ac3e-9493dd010d36)
+
+Under Playbook, select "Day2/ansible/ansible-custom-role/install-nginx-playbook"
+![image](https://github.com/user-attachments/assets/d035085c-497d-44ed-990b-b6d1d2a7fd18)
+![image](https://github.com/user-attachments/assets/838e61a6-a077-4c62-a559-278d773d30a1)
+Scroll down
+![image](https://github.com/user-attachments/assets/f4d25f66-9904-4cb1-8836-48eb68b31745)
+Click "Save"
+![image](https://github.com/user-attachments/assets/9db0a550-a4ae-4ae1-ab76-efad72a27038)
+
+Click "Launch" button to run the playbook
+![image](https://github.com/user-attachments/assets/1241d7d0-85ff-45e2-880d-649ca8ea6e11)
+![image](https://github.com/user-attachments/assets/e04a5760-95c5-4eec-8b74-63a5282790a1)
+
 
