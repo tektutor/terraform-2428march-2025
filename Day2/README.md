@@ -198,4 +198,4 @@ Expected output
 sudo apt update && sudo apt install -y net-tools openssh-server
 ```
 Expected output
-![image](https://github.com/user-attachments/assets/d678e454-0b70-40d2-a21b-a391f2cd7952)
+![image](https://github.com/user-attachments/assets/791a0168-4695-4c82-b0f3-21f699dd499a)
