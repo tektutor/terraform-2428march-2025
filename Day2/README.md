@@ -355,6 +355,15 @@ Click "Save"
 
 ## Lab - Creating Project in Ansible AWX
 Navigate to your Ansible AWX Dashboard
-![image](https://github.com/user-attachments/assets/6cc9489c-66f8-4737-a4c5-1ee5bccb5926)
+![image](https://github.com/user-attachments/assets/5e969802-c70b-4543-9550-552aee07fa26)
+
+Under the Resources menu on the left side, click "Projects"
+![image](https://github.com/user-attachments/assets/e9ec3f7f-8ea1-4cb9-a6b7-87ba9d3beba3)
+Click "Add"
+![image](https://github.com/user-attachments/assets/5d483efb-cb05-4841-8f9f-599287b6a789)
+![image](https://github.com/user-attachments/assets/ac2de99f-6b51-4139-8129-136facb7a746)
+Select "Git" under "Source Code Type"
+![image](https://github.com/user-attachments/assets/faa0e713-22a6-46d0-bba3-d2026e09fea6)
+Under Source Code URL type "https://github.com/tektutor/terraform2428march-2025.git"
 
 
