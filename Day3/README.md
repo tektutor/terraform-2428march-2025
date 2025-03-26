@@ -679,3 +679,6 @@ Expected output
   1. Terraform Core - open source and supports only command line
   2. Terraform Enterprise - requires license and supports Web Interface, all world-wide support is provided by HashiCorp
 </pre>
+
+## Info - Terraform High Level Architecture
+![Terraform](terraform-architecture-diagram.png)
