@@ -1,5 +1,11 @@
 # Day 3
 
+## Lab - In case you prefer using Visual Studio Code Editor for Golang application development
+You can install Visual Studio Code editor in Ubuntu as shown below, when prompts for password type rps
+```
+sudo snap install code --classic
+```
+
 ## Lab - Writing your first Hello World application in Golang
 Create a file named hello.go with below content
 
