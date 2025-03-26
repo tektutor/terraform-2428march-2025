@@ -753,6 +753,7 @@ In order to download the terrform docker provider from registry.terraform.io web
 ```
 terraform init
 tree .terraform
+cat .terraform.lock.hcl
 ```
 
 Expected output
@@ -761,5 +762,6 @@ Expected output
 ![image](https://github.com/user-attachments/assets/f8d8c5e2-815d-46a7-b18e-3dc476e87f6f)
 ![image](https://github.com/user-attachments/assets/b0dc4a0e-b7a5-4635-9341-16c34b3f3308)
 ![image](https://github.com/user-attachments/assets/9e6473d2-6e50-406d-a028-23a44536a8be)
+![image](https://github.com/user-attachments/assets/d4213785-115a-45f6-a93b-986796a4e9af)
 
 
