@@ -364,3 +364,32 @@ Expected output
 
 ![image](https://github.com/user-attachments/assets/60d9875e-ea50-47cf-b524-c24e33ef80ce)
 ![image](https://github.com/user-attachments/assets/34edc6c0-fe9a-492d-99a6-6e5f359f9527)
+
+## Lab - Golang if-else control statement
+Create a file named if-else.go
+
+```
+package main
+
+import "fmt"
+
+func main() {
+
+	x := 100
+
+	if x%2 == 0 {
+		fmt.Println(x, " is an even number")
+	} else {
+		fmt.Println(x, " is an on odd number")
+	}
+
+}
+```
+
+Run it
+```
+go run ./if-else.go
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/ecbd9956-893f-4851-a433-0fc0a88e80c5)
