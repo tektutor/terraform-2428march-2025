@@ -832,3 +832,32 @@ docker ps
 ![image](https://github.com/user-attachments/assets/a8d70b5b-5f22-4e6c-a5a3-0b14cb18dc5e)
 ![image](https://github.com/user-attachments/assets/e642103b-f0de-471b-9150-e9cc784aa3af)
 
+## Lab - Using local-exec provisioner block in Terraform
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day3/terraform/local-exec
+terraform init
+terraform plan
+terraform apply --auto-approve
+docker ps
+docker inspect -f {{.NetworkSettings.IPAddress}} ubuntu_container1
+docker inspect -f {{.NetworkSettings.IPAddress}} ubuntu_container2
+
+curl http://172.17.0.2:80
+curl http://172.17.0.3:80
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/70ea4b5d-a16c-444c-b6b7-eeaad728ba6a)
+![image](https://github.com/user-attachments/assets/76f8f127-1050-438d-bafa-1d953c52fd05)
+![image](https://github.com/user-attachments/assets/e66162bf-a93e-494e-ab5c-97b6427e6fa4)
+![image](https://github.com/user-attachments/assets/c2b3007c-b4d2-4424-98d0-f4dd1d6a7fa3)
+![image](https://github.com/user-attachments/assets/7cdc74ff-c1c5-4ec2-8511-6fc01bedd79c)
+![image](https://github.com/user-attachments/assets/c6751a11-9428-4f23-94ee-73e44c091d16)
+![image](https://github.com/user-attachments/assets/24aba1e0-454d-4a73-83d7-772b268615b5)
+![image](https://github.com/user-attachments/assets/bdc57dfe-83a4-4f46-a303-3b06df045617)
+![image](https://github.com/user-attachments/assets/80684936-1e83-4688-9c84-2d484c9da3b9)
+![image](https://github.com/user-attachments/assets/d6473fac-5334-40b9-a293-023287f5f5cb)
+![image](https://github.com/user-attachments/assets/cccda6dd-0225-4f7d-ad95-e73e0bf1338c)
+
