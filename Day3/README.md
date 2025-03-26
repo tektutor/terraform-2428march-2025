@@ -715,3 +715,12 @@ Expected output
   - docker_image
   - docker_container
 </pre>
+
+## Lab - Checking the Terraform version
+```
+terraform version
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/0e38596a-0bdf-4266-8c1e-1da2e7e59e46)
+
