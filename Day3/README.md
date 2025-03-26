@@ -754,6 +754,11 @@ In order to download the terrform docker provider from registry.terraform.io web
 terraform init
 tree .terraform
 cat .terraform.lock.hcl
+cat main.tf
+terraform plan
+terraform apply
+cat terraform.tfstate
+docker ps
 ```
 
 Expected output
@@ -763,5 +768,17 @@ Expected output
 ![image](https://github.com/user-attachments/assets/b0dc4a0e-b7a5-4635-9341-16c34b3f3308)
 ![image](https://github.com/user-attachments/assets/9e6473d2-6e50-406d-a028-23a44536a8be)
 ![image](https://github.com/user-attachments/assets/d4213785-115a-45f6-a93b-986796a4e9af)
+![image](https://github.com/user-attachments/assets/ab8c8930-775a-4d96-962c-54c615b09a83)
+![image](https://github.com/user-attachments/assets/824397d6-45d7-44ea-8379-72ba3058dd33)
+![image](https://github.com/user-attachments/assets/9103874f-a0a3-48fb-8458-8fb8d47ecd4c)
+![image](https://github.com/user-attachments/assets/e122cb04-b878-4774-980f-6df47092e7dc)
+![image](https://github.com/user-attachments/assets/e9e0b660-9316-4537-be7a-f6175238f9a6)
+![image](https://github.com/user-attachments/assets/f6011e51-b74a-4925-878e-fea004f02d2b)
+![image](https://github.com/user-attachments/assets/f5b5b811-f65d-4d0f-8eba-28cc1ae97b87)
+![image](https://github.com/user-attachments/assets/6e536b8e-8587-4e0d-bc74-148115dd5573)
+![image](https://github.com/user-attachments/assets/3dd30813-a4b6-41e8-b25f-df41937d06d5)
+![image](https://github.com/user-attachments/assets/12878d9b-b95b-4b5c-9d2b-5835eb96625b)
+![image](https://github.com/user-attachments/assets/654a3317-f459-4bcf-b1d1-2f4b2e3fc683)
+![image](https://github.com/user-attachments/assets/0a0120ff-947c-40cc-948f-a5637e9b8aeb)
 
 
