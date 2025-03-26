@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d8e57b40-c132-464e-aaf1-65a030468dca)# Day 3
+# Day 3
 
 ## Lab - In case you prefer using Visual Studio Code Editor for Golang application development
 You can install Visual Studio Code editor in Ubuntu as shown below, when prompts for password type rps
@@ -642,7 +642,7 @@ func main() {
    firstFunction(1000)
    secondFunction(1000)
 
-   //We wish run both firstFunction and secondFunction in parallel ( at the same time )
+   //We wish to run both firstFunction and secondFunction in parallel ( at the same time )
    go firstFunction(1000)
    go secondFunction(1000)
 
