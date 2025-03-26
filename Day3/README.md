@@ -98,3 +98,40 @@ go run ./loops.go
 
 Expected output
 ![image](https://github.com/user-attachments/assets/271bb216-7785-4418-9690-f2c345e8b1e2)
+
+## Lab - Using Switch case in Go language
+Create a file named switch-case.go with the below code
+```
+package main
+
+import "fmt"
+
+func main() {
+
+	var direction string //declares a variable named direction of type string
+
+	fmt.Print("Enter some direction :")
+	fmt.Scanln(&direction)
+
+	switch direction {
+
+	case "east":
+		fmt.Println("You entered direction ", direction)
+	case "west":
+		fmt.Println("You entered direction ", direction)
+	case "north":
+		fmt.Println("You entered direction ", direction)
+	case "south":
+		fmt.Println("You entered direction ", direction)
+	default:
+		fmt.Println("Invalid direction, possible values are east, west, north, south")
+	}
+}
+```
+Run it
+```
+go run ./switch-case.go
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/e9149048-aace-4e73-870b-301d77730a37)
