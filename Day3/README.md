@@ -497,7 +497,7 @@ Expected output
 Let's create two modules namely addition and subtraction, hence let's create two folder 
 ```
 cd ~
-mkdir addition subtraction main
+mkdir addition subtraction
 ```
 
 Let's create a module named addition
@@ -532,7 +532,7 @@ func Subtract( x float32, y float32 ) float64 {
 
 Let's create a third module called main
 ```
-cd ~/main
+cd ~/golang-practice
 go mod init main
 ```
 
@@ -547,13 +547,15 @@ import (
 )
 
 func main() {
-	x := 10.1
-	y := 50.7
-	result := addition.Add( x, y )
-	fmt.Println ( "The sum of ", x, " and ", y, " is ", result )
-	
-	result = subtraction.Subtract( x, y )
-	fmt.Println ( "The difference of ", x, " and ", y, " is ", result )
+
+	x := float32(100.123) //We are casting/converting float64 into float32
+	y := float32(200.456) //We are casting/converting float64 into float32
+	//x := 100.123  By default go lang will assume 100.123 as float64, hence we will get compilation error
+	//y := 200.456  By default go lang will assume 200.456 as float64, hence we will get compilation error
+
+	fmt.Println ( "The sum of ", x, " and ", y, " is ", addition.Add( x, y ) )
+	fmt.Println ( "The difference of ", x, " and ", y, " is ", subtraction.Subtract( x, y ) )
+
 }
 </pre>
 
@@ -567,3 +569,5 @@ go run ./main.go
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/e3a00b4c-01ca-4506-b930-2061f5d68445)
+![image](https://github.com/user-attachments/assets/6e511456-b1e8-4b52-b046-5c6c1aa6c9ff)
