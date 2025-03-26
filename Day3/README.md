@@ -799,6 +799,9 @@ Expected output
 Once you are done with this lab exercise, you can dispose the resources provisioned by terraform
 ```
 terraform destory --auto-approve
+docker ps
+docker ps -a
 ```
 ![image](https://github.com/user-attachments/assets/dcf54c92-a4ee-4754-ba0b-c1f9061382c3)
+![Uploading image.png…]()
 
