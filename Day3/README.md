@@ -186,4 +186,6 @@ go run ./arrays.go
 
 Expected output
 ![image](https://github.com/user-attachments/assets/43b6969e-0bf7-4dd2-bb09-3e58712af9e3)
+![image](https://github.com/user-attachments/assets/765dafe2-b5c8-4c12-ab58-c8dc21aad377)
+
 
