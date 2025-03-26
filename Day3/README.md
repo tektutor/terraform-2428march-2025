@@ -771,6 +771,7 @@ terraform plan
 terraform apply
 cat terraform.tfstate
 docker ps
+terraform show
 ```
 
 Expected output
@@ -793,5 +794,6 @@ Expected output
 ![image](https://github.com/user-attachments/assets/654a3317-f459-4bcf-b1d1-2f4b2e3fc683)
 ![image](https://github.com/user-attachments/assets/0a0120ff-947c-40cc-948f-a5637e9b8aeb)
 ![image](https://github.com/user-attachments/assets/604895dd-ed10-47ab-849f-0c3b4c20bd6d)
+![image](https://github.com/user-attachments/assets/e2334d4a-1c90-4c07-a0a7-f39ecac3743c)
 
 
