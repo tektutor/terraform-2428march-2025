@@ -572,3 +572,29 @@ go run ./main.go
 Expected output
 ![image](https://github.com/user-attachments/assets/e3a00b4c-01ca-4506-b930-2061f5d68445)
 ![image](https://github.com/user-attachments/assets/6e511456-b1e8-4b52-b046-5c6c1aa6c9ff)
+
+Module Versioning
+<pre>
+- In case you have multiple versions of the same module, you need to create a subfolder for each version and copy the go.mod and all your *.go files into it
+</pre>
+
+Let's create a second version for module addition
+```
+cd ~/addition
+mkdir v2
+cp * v2
+cat go.mod
+cat add.go
+cd ..
+go mod edit --replace addition/v2=./addition/v2
+cat go.mod
+cat main.go
+go run ./main.go
+```
+
+
+Expected output
+![image](https://github.com/user-attachments/assets/6bf0d990-ec75-47b4-a10e-2adaf9d25c65)
+![image](https://github.com/user-attachments/assets/87447613-96a3-4ad7-a765-5f36254e4547)
+![image](https://github.com/user-attachments/assets/beae3aca-b0cb-4aa4-8480-d5f2bbda0ff0)
+
