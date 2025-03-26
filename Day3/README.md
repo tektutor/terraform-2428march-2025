@@ -484,3 +484,86 @@ Expected output
 ![image](https://github.com/user-attachments/assets/2c2f19f5-ad9f-4e3f-8a3c-3d0486765bab)
 ![image](https://github.com/user-attachments/assets/86298bb6-a284-4f63-be2a-dce0d57526e9)
 ![image](https://github.com/user-attachments/assets/264d2987-e29e-49d2-a631-011eb9101f0d)
+
+## Info - Golang modules
+<pre>
+- is a collection one or more packages
+- you could write reusable code
+- there can multiple versions of the same module as well
+</pre>
+
+## Lab - Creating Golang modules
+
+Let's create two modules namely addition and subtraction, hence let's create two folder 
+```
+cd ~
+mkdir addition subtraction main
+```
+
+Let's create a module named addition
+```
+cd addition
+go mod init addition  //Creates a file called go.mod with the name of the module and go language version supported
+```
+
+Under the addition folder, let's create a file called add.go with the below content
+<pre>
+package addition
+
+func Add( x float32, y float32 ) float64 {
+	return float64(x + y)
+}
+</pre>
+
+Under the subtraction folder
+```
+cd ~/subtraction
+go mod init subtraction //Creates a file named go.mod with the name of the module and go language version supported
+```
+
+Under the subtraction folder, let's create a file called subtraction.go with the below content
+<pre>
+package subtraction
+
+func Subtract( x float32, y float32 ) float64 {
+	return float64(x-y)
+}
+</pre>
+
+Let's create a third module called main
+```
+cd ~/main
+go mod init main
+```
+
+Let's create a file named main.go with the below code
+<pre>
+package main
+
+import (
+	"fmt"
+	"addition"
+	"subtraction"
+)
+
+func main() {
+	x := 10.1
+	y := 50.7
+	result := addition.Add( x, y )
+	fmt.Println ( "The sum of ", x, " and ", y, " is ", result )
+	
+	result = subtraction.Subtract( x, y )
+	fmt.Println ( "The difference of ", x, " and ", y, " is ", result )
+}
+</pre>
+
+Run it
+```
+go mod tidy  //This is going download all the dependent modules
+go mod edit --replace addition=../addition
+go mod edit --replace subtraction=../subtraction
+
+go run ./main.go
+```
+
+Expected output
