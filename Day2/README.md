@@ -575,3 +575,10 @@ go version
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/7e237ee9-7d27-4dae-9301-0fe5283c3b86)
+
+## Lab - In case you prefer using Visual Studio Code Editor for Golang application development
+You can install Visual Studio Code editor in Ubuntu as shown below, when prompts for password type rps
+```
+sudo snap install code --classic
+```
