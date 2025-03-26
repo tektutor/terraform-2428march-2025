@@ -483,3 +483,4 @@ go run ./struct.go
 Expected output
 ![image](https://github.com/user-attachments/assets/2c2f19f5-ad9f-4e3f-8a3c-3d0486765bab)
 ![image](https://github.com/user-attachments/assets/86298bb6-a284-4f63-be2a-dce0d57526e9)
+![image](https://github.com/user-attachments/assets/264d2987-e29e-49d2-a631-011eb9101f0d)
