@@ -575,3 +575,4 @@ go version
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/7e237ee9-7d27-4dae-9301-0fe5283c3b86)
