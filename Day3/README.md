@@ -562,9 +562,9 @@ func main() {
 
 Run it
 ```
-go mod tidy  //This is going download all the dependent modules
-go mod edit --replace addition=../addition
-go mod edit --replace subtraction=../subtraction
+go mod tidy  //This is going to download all the dependent modules
+go mod edit --replace addition=../addition  // This helps golang to locate the addition module
+go mod edit --replace subtraction=../subtraction //This helps golang to locate the subtraction module
 
 go run ./main.go
 ```
