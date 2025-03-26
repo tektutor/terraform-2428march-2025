@@ -803,5 +803,32 @@ docker ps
 docker ps -a
 ```
 ![image](https://github.com/user-attachments/assets/dcf54c92-a4ee-4754-ba0b-c1f9061382c3)
-![Uploading image.png…]()
+
+
+## Lab - Using Input and Output variables in Terraform 
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day3/terraform/provision-containers-with-input-and-output-variables
+terraform init
+terraform plan
+terraform apply --auto-approve
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/17376565-afc5-4f49-950b-6b99c5756d4c)
+![image](https://github.com/user-attachments/assets/84539141-35d7-48c3-aa4f-59fe2a41b16b)
+![image](https://github.com/user-attachments/assets/0d81d0ee-1421-48a2-b94e-17d4d69a0b84)
+![image](https://github.com/user-attachments/assets/ee0c92d0-7c27-4ceb-a5d1-54d1f7a9f1b6)
+![image](https://github.com/user-attachments/assets/e5dbee80-6185-48d3-867c-874fe3baa678)
+![image](https://github.com/user-attachments/assets/4f9f2e05-2b0d-48ba-ade1-0e4c86e2f534)
+![image](https://github.com/user-attachments/assets/063f3c63-0f95-434a-99d2-54fa55156ceb)
+
+Once you are done with lab exercise, you can clean up the resources provisioned by terraform
+```
+terraform destroy --auto-approve
+docker ps
+```
+![image](https://github.com/user-attachments/assets/a8d70b5b-5f22-4e6c-a5a3-0b14cb18dc5e)
+![image](https://github.com/user-attachments/assets/e642103b-f0de-471b-9150-e9cc784aa3af)
 
