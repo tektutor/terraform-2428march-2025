@@ -1,4 +1,4 @@
-# Day 3
+![image](https://github.com/user-attachments/assets/d8e57b40-c132-464e-aaf1-65a030468dca)# Day 3
 
 ## Lab - In case you prefer using Visual Studio Code Editor for Golang application development
 You can install Visual Studio Code editor in Ubuntu as shown below, when prompts for password type rps
@@ -213,4 +213,37 @@ go run ./functions.go
 
 Expected output
 ![image](https://github.com/user-attachments/assets/b2b5f097-67e1-4b83-8201-5431c4d67567)
+
+## Lab - Functions with multiple return values
+
+Create a file named function-with-multiple-returns.go
+```
+package main
+
+import "fmt"
+
+// myFunction takes no parameters but return two integers
+func myFunction() (int, int) {
+	return 10, 20
+}
+
+func main() {
+
+	x, y := myFunction() // := is short form of declaring a new variable and initializing a value
+
+	fmt.Println("Value of x is ", x)
+	fmt.Println("Value of y is ", y)
+
+}
+
+```
+
+Run it
+```
+go run ./function-with-multiple-returns.go
+```
+
+Expected output
+
+![image](https://github.com/user-attachments/assets/55fcf524-c68e-420e-ac8b-da9d510eb747)
 
