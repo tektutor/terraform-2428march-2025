@@ -796,4 +796,9 @@ Expected output
 ![image](https://github.com/user-attachments/assets/604895dd-ed10-47ab-849f-0c3b4c20bd6d)
 ![image](https://github.com/user-attachments/assets/e2334d4a-1c90-4c07-a0a7-f39ecac3743c)
 
+Once you are done with this lab exercise, you can dispose the resources provisioned by terraform
+```
+terraform destory --auto-approve
+```
+![image](https://github.com/user-attachments/assets/dcf54c92-a4ee-4754-ba0b-c1f9061382c3)
 
