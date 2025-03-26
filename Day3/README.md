@@ -52,3 +52,4 @@ go run ./hello.go
 ```
 Expected output
 ![image](https://github.com/user-attachments/assets/d181a189-1ec0-4899-8eb3-868e4a0dd074)
+![image](https://github.com/user-attachments/assets/3cfe284a-8ed8-415d-90f4-cdfd090d41dc)
