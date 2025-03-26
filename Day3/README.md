@@ -598,3 +598,13 @@ Expected output
 ![image](https://github.com/user-attachments/assets/87447613-96a3-4ad7-a765-5f36254e4547)
 ![image](https://github.com/user-attachments/assets/beae3aca-b0cb-4aa4-8480-d5f2bbda0ff0)
 
+## Lab - Building the golang application into a binary
+```
+cd golang/module
+cat go.mod
+go build .
+./main
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/44473afc-386f-417d-a819-cebd481d8450)
