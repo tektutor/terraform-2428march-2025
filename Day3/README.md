@@ -608,3 +608,56 @@ go build .
 
 Expected output
 ![image](https://github.com/user-attachments/assets/44473afc-386f-417d-a819-cebd481d8450)
+
+
+## Lab - Golang concurrent functions
+
+Create a file named main.go
+```
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func firstFunction( count int ) { 
+  for i := 0; i<count; i++ {
+    fmt.Println("First function " , i )
+    time.Sleep( time.Millisecond * 5 )
+  }
+}
+
+func secondFunction( count int ) { 
+  for i := 0; i<count; i++ {
+    fmt.Println("Second function " , i )
+    time.Sleep( time.Millisecond * 5 )
+  }
+}
+
+func main() {
+   fmt.Println ("Press any key to exit ...")
+
+   //Invoking them in sequence, once the firstFunction completes running then only the secondFunction will start running
+   firstFunction(1000)
+   secondFunction(1000)
+
+   //We wish run both firstFunction and secondFunction in parallel ( at the same time )
+   go firstFunction(1000)
+   go secondFunction(1000)
+
+   var tmp string
+   fmt.Scanln(&tmp) //this will make sure the program waits until some key is pressed to exit
+
+}
+```
+
+Let run it
+```
+go run ./main.go
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/0fcab44f-b0ac-4a47-bc58-c6138519f010)
+![image](https://github.com/user-attachments/assets/2d39736b-d516-4e94-94e6-12e09f7d2ae5)
+![image](https://github.com/user-attachments/assets/c72c183a-19c1-4f5b-81a1-8386b9936d2b)
