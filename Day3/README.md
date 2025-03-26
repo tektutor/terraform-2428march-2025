@@ -747,6 +747,18 @@ provider "docker" {
 data "docker_image" "tektutor_docker_image" {
    name = "tektutor/ubuntu-ansible-node:latest"
 }
+
+resource "docker_container" "my_ubuntu_container1" {
+   image = data.docker_image.tektutor_docker_image.name
+   name  = "ubuntu_container_1"
+}
+
+resource "docker_container" "my_ubuntu_container2" {
+   image = data.docker_image.tektutor_docker_image.name
+   name  = "ubuntu_container_2"
+}
+
+
 ```
 
 In order to download the terrform docker provider from registry.terraform.io website, we need run the below command
