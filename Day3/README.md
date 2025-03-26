@@ -1,4 +1,4 @@
-# Day 3
+![image](https://github.com/user-attachments/assets/6b6f5288-7c47-4778-bdd5-306a8a4b9314)# Day 3
 
 ## Lab - In case you prefer using Visual Studio Code Editor for Golang application development
 You can install Visual Studio Code editor in Ubuntu as shown below, when prompts for password type rps
@@ -723,4 +723,43 @@ terraform version
 
 Expected output
 ![image](https://github.com/user-attachments/assets/0e38596a-0bdf-4266-8c1e-1da2e7e59e46)
+
+## Info - Terraform Providers can be download from registry.terraform.io website
+![image](https://github.com/user-attachments/assets/82f246f4-1397-4dc5-96fd-7cc6c197fba6)
+
+## Lab - Using Docker Image to provision containers
+Create a file named main.tf
+```
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.0.2"
+    }
+  }
+}
+
+# This is an instance of the provider with optional configurations
+provider "docker" {
+  # Configuration options
+}
+
+data "docker_image" "tektutor_docker_image" {
+   name = "tektutor/ubuntu-ansible-node:latest"
+}
+```
+
+In order to download the terrform docker provider from registry.terraform.io website, we need run the below command
+```
+terraform init
+tree .terraform
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/e170c6a4-ce18-4834-bf08-f594677bebff)
+![image](https://github.com/user-attachments/assets/d1ae5d96-bc83-4645-b56d-8af5948a3092)
+![image](https://github.com/user-attachments/assets/f8d8c5e2-815d-46a7-b18e-3dc476e87f6f)
+![image](https://github.com/user-attachments/assets/b0dc4a0e-b7a5-4635-9341-16c34b3f3308)
+![image](https://github.com/user-attachments/assets/9e6473d2-6e50-406d-a028-23a44536a8be)
+
 
