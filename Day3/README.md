@@ -509,7 +509,7 @@ go mod init addition  //Creates a file called go.mod with the name of the module
 Under the addition folder, let's create a file called add.go with the below content
 <pre>
 package addition
-
+//The functions exposed for external access must begin with upper case 
 func Add( x float32, y float32 ) float64 {
 	return float64(x + y)
 }
@@ -525,6 +525,7 @@ Under the subtraction folder, let's create a file called subtraction.go with the
 <pre>
 package subtraction
 
+//The functions exposed for external access must begin with upper case 
 func Subtract( x float32, y float32 ) float64 {
 	return float64(x-y)
 }
