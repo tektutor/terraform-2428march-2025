@@ -682,3 +682,36 @@ Expected output
 
 ## Info - Terraform High Level Architecture
 ![Terraform](terraform-architecture-diagram.png)
+
+## Info - Terraform Providers
+<pre>
+- Terraform depends on Providers to provision resources
+- For example
+  - In order to provision an ec2 instance in AWS, Terraform depends on a provider called AWS
+  - In order to provision an azure VM, in Azure portal, Terraform depends on a provider called Azure
+  - as long as there is a provider, Terraform can provision such resources
+- In case, to provision a particular type of Resource within your organization there is no ready-made provider, you can develop your own Provider in Golang using Terraform Provider SDK
+- Providers supports two types of objects
+  1. Resources
+     - If you wish to Provision ec2 using Terraform, then you will define a resource block expressing your expected state in declarative style
+     - Terraform can create, Replace, Update, Delete the resources managed by Terraform
+  2. Datasources
+	- In case to provision ( create certain resources ), your declarative terraform script(manifest) file depends on already existing resources, then we call them as Datasources or Data block
+	- These are read-only resources, Terraform can use it but can't modify or delete it
+</pre>
+
+## Info - Terraform Resources
+<pre>
+- Each Provider supports one to many Resources
+- For instance the docker provider supports the following resources
+  - docker_image
+  - docker_container
+</pre>
+
+## Info - Terraform DataSources
+<pre>
+- Each Provider supports zero to many Datasources
+- For instance, the docker provider supports the following Datasources (Read only resources)
+  - docker_image
+  - docker_container
+</pre>
