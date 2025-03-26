@@ -289,6 +289,78 @@ Run it
 ```
 go run ./pointers.go
 ```
-
 Expected output
 ![image](https://github.com/user-attachments/assets/b67c1a5d-d5b0-4c1f-9760-26e03ff98ea4)
+
+
+## Lab - Using golang slice
+Note
+<pre>
+- golang slice internally uses golang arrays
+- golang arrays are fixed size, we can't change the size/length of the size once it is declared
+- slice works like a dynamic array
+- let's say initial size of slice is 5 
+- when we insert 5 values into the slice it will store in temp array of size 5
+- when we attempt to insert 6th value, myslice will allocate a fresh array of size 6, it copies the 5 values from the old array into the new array and then it inserts the 6th value into the newly allocated array, this is how size is able to grow in size dynamically
+</pre>
+
+Let's create a file called slice.go
+<pre>
+package main
+import "fmt"
+
+func main() {
+	//Declares an int array of size 6 elements
+	//                0   1   2   3   4   5
+	intArray := [6]int{10, 20, 30, 40, 50, 60}
+
+	fmt.Println("Array elements are ...")
+	fmt.Println(intArray)
+
+	//Slice uses an array internally
+	//in this case, the slice is referring to an array from index position 2 to 4
+	var mySlice []int = intArray[2:5] //2 is the lower bound index, while 5 is the upper bound of index, index 5 is not included
+	fmt.Println("Slice elements are ... ")
+	fmt.Println(mySlice)
+
+	//Let's modify the slice at certain indices
+	//When the slice is modified, it also affects the original array that is pointed by the slice
+	mySlice[0] = 100 //mySlice[0] is nothing but intArray[2]
+	mySlice[1] = 200 //mySlice[1] is nothing but intArray[3]
+	mySlice[2] = 300 //mySlice[2] is nothing but intArray[4]
+
+	fmt.Println("Slice elements after modifying slice are ...")
+	fmt.Println(mySlice)
+
+	fmt.Println("Array elements after modifying slice are ...")
+	fmt.Println(intArray)
+
+	mySlice = append(mySlice, 400) //after append, mySlice is no more pointing to intArray
+
+	fmt.Println("Slice elements after appending new elements into slice are ...")
+	fmt.Println(mySlice)
+
+	fmt.Println("Array elements after appending new elements into slice are ...")
+	fmt.Println(intArray)
+
+	//as the intArray size is only 5, but the mySlice is attempting to add a 6th value, hence at this point slice will create a fresh array
+	//mySlice and intArray are not associated from this point onwards
+	mySlice = append(mySlice, 500) //after append, mySlice is no more pointing to intArray
+
+	fmt.Println("Slice elements after appending new elements into slice are ...")
+	fmt.Println(mySlice)
+
+	fmt.Println("Array elements after appending new elements into slice are ...")
+	fmt.Println(intArray)
+}
+</pre>
+
+Run it
+```
+go run ./slice.go
+```
+
+Expected output
+
+![image](https://github.com/user-attachments/assets/60d9875e-ea50-47cf-b524-c24e33ef80ce)
+![image](https://github.com/user-attachments/assets/34edc6c0-fe9a-492d-99a6-6e5f359f9527)
