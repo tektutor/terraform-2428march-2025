@@ -661,3 +661,21 @@ Expected output
 ![image](https://github.com/user-attachments/assets/0fcab44f-b0ac-4a47-bc58-c6138519f010)
 ![image](https://github.com/user-attachments/assets/2d39736b-d516-4e94-94e6-12e09f7d2ae5)
 ![image](https://github.com/user-attachments/assets/c72c183a-19c1-4f5b-81a1-8386b9936d2b)
+
+## Info - Terraform Overview
+<pre>
+- is a Infrastructure as a code tool
+- it is used to automate provisioning containers, pull container images, virtual machine locally or on public cloud etc.,
+- it can also be used to provision storage locally(your private datacenter), or in public/hybrid cloud
+- it can help provisioning virtual machines using virtualbox, vmware, vsphere, etc.,
+- Terraform is cloud newtral, it works pretty much in any enviroment and all the private, public and hybrid clouds
+- Alternates to Terraform
+  - AWS Cloudformation
+    - disadvantage - can be used only to automate infrastructure provision in AWS public cloud
+- is developed in go language by a company called HashiCorp
+- the Domain Specific Language(DSL) i.e the language in which the autotomation code is written
+- Terraform uses HCL(Hashicorp Configuration Language) as the the DSL to automate infrastructure declaratively
+- it comes in two flavours
+  1. Terraform Core - open source and supports only command line
+  2. Terraform Enterprise - requires license and supports Web Interface, all world-wide support is provided by HashiCorp
+</pre>
