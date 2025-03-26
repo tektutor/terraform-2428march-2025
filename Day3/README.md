@@ -436,3 +436,50 @@ go run ./map.go
 Expected output
 ![image](https://github.com/user-attachments/assets/646b6af1-5e64-495f-8f50-0de844872bae)
 
+## Lab - Using struct in go lang
+
+Create a file named struct.go
+```
+package main
+
+import "fmt"
+
+// Creating an user-defined data-type called Rectangle with two members/attributes in it
+type Rectangle struct {
+	length int
+	width  int
+}
+
+// This function takes no arguments and returns nothing
+func sayHello() {
+	fmt.Println("Hello World")
+}
+
+// go lang Method is different from function
+func (rect Rectangle) Area() int {
+	area := rect.length * rect.width
+	return area
+}
+
+func main() {
+	rectangle := Rectangle{
+		length: 100,
+		width:  200,
+	}
+
+	//This demonstrates, how the function Area is associated with the struct Rectangle
+	//The correct term is method as Area method can only be invoked via an instance of Rectangle data type and not directly
+	fmt.Printf("Area of rectangle : %d\n", rectangle.Area())
+
+	sayHello()
+}
+```
+
+Run it
+```
+go run ./struct.go
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/2c2f19f5-ad9f-4e3f-8a3c-3d0486765bab)
+![image](https://github.com/user-attachments/assets/86298bb6-a284-4f63-be2a-dce0d57526e9)
