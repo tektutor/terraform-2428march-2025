@@ -188,4 +188,29 @@ Expected output
 ![image](https://github.com/user-attachments/assets/43b6969e-0bf7-4dd2-bb09-3e58712af9e3)
 ![image](https://github.com/user-attachments/assets/765dafe2-b5c8-4c12-ab58-c8dc21aad377)
 
+## Lab - Go lang user-defined functions
+
+Create a file named functions.go with the below content
+```
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println(sayHello("Golang"))
+}
+
+// This function accepts a string input and returns a string output
+func sayHello(msg string) string {
+	return "Hello " + msg + " !"
+}
+```
+
+Run it
+```
+go run ./functions.go
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/b2b5f097-67e1-4b83-8201-5431c4d67567)
 
