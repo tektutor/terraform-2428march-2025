@@ -143,6 +143,7 @@ Expected ouptut
 ![image](https://github.com/user-attachments/assets/1da25021-3fd5-4e74-8fca-26b464019bcd)
 ![image](https://github.com/user-attachments/assets/1636f558-5055-412b-b0fa-5b0c00df4aba)
 ![image](https://github.com/user-attachments/assets/9f5c6983-72b3-4b43-be47-b4202464052b)
+![image](https://github.com/user-attachments/assets/1714e521-14c5-4754-b28d-d1c8c6ce3554)
 
 
 Let's see if the terraform destroy is supported by our file provider
@@ -156,3 +157,4 @@ ls
 Expected output
 ![image](https://github.com/user-attachments/assets/00a3de73-c7eb-48ee-b5fa-863d9220eec2)
 ![image](https://github.com/user-attachments/assets/1986e376-47a1-43c5-a62e-a068e7447af2)
+![Uploading image.png…]()
