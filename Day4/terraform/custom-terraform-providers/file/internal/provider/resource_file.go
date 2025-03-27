@@ -80,5 +80,14 @@ func resourceUpdateFile(ctx context.Context, d *schema.ResourceData, meta any) d
 }
 
 func resourceDeleteFile(ctx context.Context, d *schema.ResourceData, meta any) diag.Diagnostics {
+	//Retrieve the inputs user provided in the terrform .tf script file
+	filename := d.Get("file_name").(string)
+
+	err := os.Remove(filename)
+
+	if err != nil {
+           log.Fatal(err)
+	}
+
 	return nil
 }
