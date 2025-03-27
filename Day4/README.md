@@ -194,4 +194,25 @@ Expected output
 ![image](https://github.com/user-attachments/assets/e5bbb09f-8f00-4054-aebc-196e8b391318)
 ![image](https://github.com/user-attachments/assets/3c029425-1a47-430d-b249-1271896748c3)
 ![image](https://github.com/user-attachments/assets/f9667cc1-b098-4773-b4fe-dcf50ff07cb2)
+![image](https://github.com/user-attachments/assets/06b4d9ca-b7c3-461c-b423-d6061ae7fc74)
+![image](https://github.com/user-attachments/assets/6e2eb7a1-3927-4153-966d-b3bc524ee760)
+![image](https://github.com/user-attachments/assets/f012227d-5ec6-4d86-93e7-1ebd23fd5fe9)
+![image](https://github.com/user-attachments/assets/c22517ac-1061-4c80-bfc6-467df7851a90)
+![image](https://github.com/user-attachments/assets/cd123618-1792-4d95-a5ea-7c0e4cd6c893)
+![image](https://github.com/user-attachments/assets/e8113e26-ebd7-46b9-a8a3-62fe55cb17ce)
+![image](https://github.com/user-attachments/assets/370cb6a9-c591-4872-8a39-a66a9895e5f0)
+
+Once you are done with this exercise, you may dispose the resources provisioned by terraform
+```
+docker ps
+docker images | grep bitnami
+terraform destory --auto-approve
+docker ps
+docker images | grep bitnami
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/11854f10-e3e1-4a6a-9549-b7bed4ec1401)
+![image](https://github.com/user-attachments/assets/26107f13-648b-47c8-bc56-a356e26033fb)
+![image](https://github.com/user-attachments/assets/87414975-3029-4f6b-91f5-da4aac67c196)
 
