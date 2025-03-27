@@ -83,3 +83,39 @@ Expected output
 ![image](https://github.com/user-attachments/assets/4b8c63fb-3c77-49bd-adc0-944f0cc59fe1)
 ![image](https://github.com/user-attachments/assets/918e28fb-f184-4a71-9c03-9396be6d0a95)
 
+## Lab - Develop a custom terraform file provider in golang using Terraform Provider plugin SDK
+
+You need to create a folder 
+```
+mkdir -p /home/rps/go/bin
+```
+
+Create a file named .terraformrc under your home directory i.e /home/rps/.terraformrc
+<pre>
+provider_installation {
+  dev_overrides {
+     "registry.terraform.io/tektutor/docker" = "/home/rps/go/bin",
+      "registry.terraform.io/tektutor/file" = "/home/rps/go/bin",
+  }
+  direct {}
+}  
+</pre>
+
+Then you may proceed with the below
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day4/terraform/custom-terraform-providers/file
+go mod init github.com/tektutor/terraform-provider-file
+go mod tidy
+ls -l
+go build
+ls -l
+go install
+ls -l /home/rps/go/bin
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8717c29c-b134-43ac-8895-319f0adffa4f)
+![image](https://github.com/user-attachments/assets/ee8e2d3a-0ce6-4aff-b15c-9bf362ecac87)
+![image](https://github.com/user-attachments/assets/b937a426-a8af-4ff5-8f15-476bec9a30db)
