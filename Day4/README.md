@@ -50,3 +50,19 @@ terraform destroy --auto-approve
 ```
 ![image](https://github.com/user-attachments/assets/cbd2e341-309f-45c6-81f8-39e41d37c3cb)
 ![image](https://github.com/user-attachments/assets/af11fe35-ace5-41e5-b37c-3448038f9e91)
+
+## Lab - Deleting a specific resource while retaining other resources
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day4/terraform/module
+
+terraform init
+terraform apply --auto-approve
+docker ps
+terraform destroy --target module.create-docker-containers.docker_container.my_container[4]
+docker ps
+```
+
+Expected output
+
