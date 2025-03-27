@@ -120,3 +120,19 @@ Expected output
 ![image](https://github.com/user-attachments/assets/8717c29c-b134-43ac-8895-319f0adffa4f)
 ![image](https://github.com/user-attachments/assets/ee8e2d3a-0ce6-4aff-b15c-9bf362ecac87)
 ![image](https://github.com/user-attachments/assets/b4dc8086-7e2f-4ccb-92e7-b5b4b6d94c86)
+
+## Lab - Let's use our custom terraform file provider in Terraform HCL manifest script
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day4/terraform/custom-terraform-providers/test-file-provider
+cat main.tf
+terraform plan
+terraform apply --auto-approve
+```
+
+Expected ouptut
+![image](https://github.com/user-attachments/assets/346b2468-32e9-40c9-b7d4-c201f3a12315)
+![image](https://github.com/user-attachments/assets/a8cd4418-aa41-454f-a733-dae6b4d3a5ed)
+![image](https://github.com/user-attachments/assets/edfe9a4f-b37a-4602-8082-9acf2763a010)
+
