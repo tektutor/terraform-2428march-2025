@@ -8,5 +8,5 @@ terraform  {
 
 resource "localfile" "myfile" {
   file_name     = "./myfile.txt"
-  file_content  = "Test file"
+  file_content  = "Test file - updated"
 }

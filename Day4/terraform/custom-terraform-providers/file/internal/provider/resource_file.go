@@ -76,6 +76,21 @@ func resourceReadFile(ctx context.Context, d *schema.ResourceData, meta any) dia
 }
 
 func resourceUpdateFile(ctx context.Context, d *schema.ResourceData, meta any) diag.Diagnostics {
+	//Retrieve the inputs user provided in the terrform .tf script file
+	filename := d.Get("file_name").(string)
+	content  := d.Get("file_content").(string)
+	id       := d.Id()
+
+	myfile, err := os.Create( filename )
+
+	if err != nil {
+		panic(err)
+	}
+
+	myfile.WriteString( content + "\n" )
+	myfile.Sync()
+	d.SetId( id )
+
 	return nil
 }
 
