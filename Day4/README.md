@@ -157,4 +157,4 @@ ls
 Expected output
 ![image](https://github.com/user-attachments/assets/00a3de73-c7eb-48ee-b5fa-863d9220eec2)
 ![image](https://github.com/user-attachments/assets/1986e376-47a1-43c5-a62e-a068e7447af2)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/46f3251b-2acb-4e36-9a94-3002bd9a26bd)
