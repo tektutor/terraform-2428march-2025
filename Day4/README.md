@@ -88,6 +88,7 @@ Expected output
 You need to create a folder 
 ```
 mkdir -p /home/rps/go/bin
+touch ~/.terraformrc
 ```
 
 Create a file named .terraformrc under your home directory i.e /home/rps/.terraformrc
@@ -95,7 +96,7 @@ Create a file named .terraformrc under your home directory i.e /home/rps/.terraf
 provider_installation {
   dev_overrides {
      "registry.terraform.io/tektutor/docker" = "/home/rps/go/bin",
-      "registry.terraform.io/tektutor/file" = "/home/rps/go/bin",
+     "registry.terraform.io/tektutor/file" = "/home/rps/go/bin",
   }
   direct {}
 }  
@@ -118,4 +119,27 @@ ls -l /home/rps/go/bin
 Expected output
 ![image](https://github.com/user-attachments/assets/8717c29c-b134-43ac-8895-319f0adffa4f)
 ![image](https://github.com/user-attachments/assets/ee8e2d3a-0ce6-4aff-b15c-9bf362ecac87)
-![image](https://github.com/user-attachments/assets/b937a426-a8af-4ff5-8f15-476bec9a30db)
+![image](https://github.com/user-attachments/assets/b4dc8086-7e2f-4ccb-92e7-b5b4b6d94c86)
+
+## Lab - Let's use our custom terraform file provider in Terraform HCL manifest script
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day4/terraform/custom-terraform-providers/test-file-provider
+cat main.tf
+terraform plan
+ls
+terraform apply --auto-approve
+ls
+cat myfile.txt
+cat terraform.tfstate
+```
+
+Expected ouptut
+![image](https://github.com/user-attachments/assets/346b2468-32e9-40c9-b7d4-c201f3a12315)
+![image](https://github.com/user-attachments/assets/a8cd4418-aa41-454f-a733-dae6b4d3a5ed)
+![image](https://github.com/user-attachments/assets/edfe9a4f-b37a-4602-8082-9acf2763a010)
+![image](https://github.com/user-attachments/assets/817c75dc-8385-4d87-a708-b04bf26897a8)
+![image](https://github.com/user-attachments/assets/1da25021-3fd5-4e74-8fca-26b464019bcd)
+![image](https://github.com/user-attachments/assets/1636f558-5055-412b-b0fa-5b0c00df4aba)
+![image](https://github.com/user-attachments/assets/9f5c6983-72b3-4b43-be47-b4202464052b)
