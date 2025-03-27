@@ -2,6 +2,8 @@ package provider
 
 import (
 	"context"
+	"io/ioutil"
+	"log"
 	"os"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -51,10 +53,25 @@ func resourceCreateFile(ctx context.Context, d *schema.ResourceData, meta any) d
 	myfile.WriteString(content)
 	myfile.Sync() //This will ensure the file content is flushed out (written) to disk
 
+	d.SetId("resource-101")
+
+	resourceReadFile(ctx, d, meta)
+
 	return nil
 }
 
 func resourceReadFile(ctx context.Context, d *schema.ResourceData, meta any) diag.Diagnostics {
+	//Retrieve the inputs user provided in the terrform .tf script file
+	filename := d.Get("file_name").(string)
+
+	content, err := ioutil.ReadFile(filename)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	d.Set("content", content)
+
 	return nil
 }
 
