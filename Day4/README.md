@@ -60,9 +60,20 @@ cd Day4/terraform/module
 terraform init
 terraform apply --auto-approve
 docker ps
+
 terraform destroy --target module.create-docker-containers.docker_container.my_container[4]
+
+terraform destroy --target module.create-docker-containers.docker_container.my_container[3] --target module.create-docker-containers.docker_container.my_container[2]
+
 docker ps
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/480990c0-6c80-4241-a1ed-55832968af66)
+![image](https://github.com/user-attachments/assets/558e1f6c-035d-470d-9e1f-d11e7b5df042)
+![image](https://github.com/user-attachments/assets/8a26a02c-78e0-43d6-8bb7-5a59aa5b4207)
+![image](https://github.com/user-attachments/assets/51957767-ac3b-43d1-aca6-02c75197a48c)
+![image](https://github.com/user-attachments/assets/b18756aa-fafe-4b4f-a467-1dd8ad89cf6b)
+![image](https://github.com/user-attachments/assets/037f431f-f3dd-423f-aca1-11190e0a40a8)
+![image](https://github.com/user-attachments/assets/954d769a-2d8f-4d74-b9df-2938d19e81ec)
 
