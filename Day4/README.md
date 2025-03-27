@@ -88,6 +88,7 @@ Expected output
 You need to create a folder 
 ```
 mkdir -p /home/rps/go/bin
+touch ~/.terraformrc
 ```
 
 Create a file named .terraformrc under your home directory i.e /home/rps/.terraformrc
@@ -95,7 +96,7 @@ Create a file named .terraformrc under your home directory i.e /home/rps/.terraf
 provider_installation {
   dev_overrides {
      "registry.terraform.io/tektutor/docker" = "/home/rps/go/bin",
-      "registry.terraform.io/tektutor/file" = "/home/rps/go/bin",
+     "registry.terraform.io/tektutor/file" = "/home/rps/go/bin",
   }
   direct {}
 }  
