@@ -89,7 +89,7 @@ func resourceReadDockerContainer(ctx context.Context, d *schema.ResourceData, me
 
 func resourceUpdateDockerContainer(ctx context.Context, d *schema.ResourceData, meta any) diag.Diagnostics {
 	//Retrieve docker container parameters provider by user from the terraform .tf scripts
-	//containerName 	  := d.Get("container_name").(string)
+	containerName 	  := d.Get("container_name").(string)
 	//containerHostname := d.Get("host_name").(string)
 	containerID := d.Id()
 
@@ -99,21 +99,14 @@ func resourceUpdateDockerContainer(ctx context.Context, d *schema.ResourceData, 
     	}
     	defer cli.Close()
 
-	resp, err := cli.ContainerUpdate(
+	err = cli.ContainerRename(
 			ctx, 
 			containerID,
-			container.UpdateConfig{}, 
+			containerName, 
 	)
     	if err != nil {
 		log.Printf("Unable to update container : %s", err )
 		panic(err)
-    	}
-
-	//to suppress unsed error
-	_ = resp
-
-    	if err := cli.ContainerRestart(ctx, containerID, container.StopOptions{}); err != nil {
-        	panic(err)
     	}
 
 	return nil
