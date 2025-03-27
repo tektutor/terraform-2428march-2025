@@ -128,11 +128,16 @@ git pull
 cd Day4/terraform/custom-terraform-providers/test-file-provider
 cat main.tf
 terraform plan
+ls
 terraform apply --auto-approve
+ls
+cat myfile.txt
+cat terraform.tfstate
 ```
 
 Expected ouptut
 ![image](https://github.com/user-attachments/assets/346b2468-32e9-40c9-b7d4-c201f3a12315)
 ![image](https://github.com/user-attachments/assets/a8cd4418-aa41-454f-a733-dae6b4d3a5ed)
 ![image](https://github.com/user-attachments/assets/edfe9a4f-b37a-4602-8082-9acf2763a010)
+![image](https://github.com/user-attachments/assets/817c75dc-8385-4d87-a708-b04bf26897a8)
 
