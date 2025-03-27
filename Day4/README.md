@@ -119,4 +119,4 @@ ls -l /home/rps/go/bin
 Expected output
 ![image](https://github.com/user-attachments/assets/8717c29c-b134-43ac-8895-319f0adffa4f)
 ![image](https://github.com/user-attachments/assets/ee8e2d3a-0ce6-4aff-b15c-9bf362ecac87)
-![image](https://github.com/user-attachments/assets/b937a426-a8af-4ff5-8f15-476bec9a30db)
+![image](https://github.com/user-attachments/assets/b4dc8086-7e2f-4ccb-92e7-b5b4b6d94c86)
