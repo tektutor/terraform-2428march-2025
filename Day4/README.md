@@ -66,6 +66,10 @@ terraform destroy --target module.create-docker-containers.docker_container.my_c
 terraform destroy --target module.create-docker-containers.docker_container.my_container[3] --target module.create-docker-containers.docker_container.my_container[2]
 
 docker ps
+
+terraform destroy --target module.create-docker-containers.docker_container.my_container[0] --target module.create-docker-containers.docker_container.my_container[1] 
+
+docker ps
 ```
 
 Expected output
@@ -76,4 +80,6 @@ Expected output
 ![image](https://github.com/user-attachments/assets/b18756aa-fafe-4b4f-a467-1dd8ad89cf6b)
 ![image](https://github.com/user-attachments/assets/037f431f-f3dd-423f-aca1-11190e0a40a8)
 ![image](https://github.com/user-attachments/assets/954d769a-2d8f-4d74-b9df-2938d19e81ec)
+![image](https://github.com/user-attachments/assets/4b8c63fb-3c77-49bd-adc0-944f0cc59fe1)
+![image](https://github.com/user-attachments/assets/918e28fb-f184-4a71-9c03-9396be6d0a95)
 
