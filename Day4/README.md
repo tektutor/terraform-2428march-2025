@@ -140,4 +140,6 @@ Expected ouptut
 ![image](https://github.com/user-attachments/assets/a8cd4418-aa41-454f-a733-dae6b4d3a5ed)
 ![image](https://github.com/user-attachments/assets/edfe9a4f-b37a-4602-8082-9acf2763a010)
 ![image](https://github.com/user-attachments/assets/817c75dc-8385-4d87-a708-b04bf26897a8)
-
+![image](https://github.com/user-attachments/assets/1da25021-3fd5-4e74-8fca-26b464019bcd)
+![image](https://github.com/user-attachments/assets/1636f558-5055-412b-b0fa-5b0c00df4aba)
+![image](https://github.com/user-attachments/assets/9f5c6983-72b3-4b43-be47-b4202464052b)
