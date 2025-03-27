@@ -158,3 +158,40 @@ Expected output
 ![image](https://github.com/user-attachments/assets/00a3de73-c7eb-48ee-b5fa-863d9220eec2)
 ![image](https://github.com/user-attachments/assets/1986e376-47a1-43c5-a62e-a068e7447af2)
 ![image](https://github.com/user-attachments/assets/46f3251b-2acb-4e36-9a94-3002bd9a26bd)
+
+## Lab - Developing a Custom Terraform Docker Provider in Go language
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day4/terraform/custom-terraform-providers/docker
+go mod init github.com/tektutor/terraform-provider-docker
+go mod tidy
+ls -l
+go build
+ls -l
+go install
+ls -l /home/rps/go/bin
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/a7bc99b2-6f7f-41a1-8bd8-d2b5b116e183)
+![image](https://github.com/user-attachments/assets/2ba9c16d-8f05-4063-93c9-6c8776f329a7)
+![image](https://github.com/user-attachments/assets/c13cac60-162e-4677-9234-ccff27bba093)
+
+## Lab - Using our custom terraform docker provider in Terraform scripts
+```
+cd ~/terraform-2428march-2025
+git pull
+cd Day4/terraform/custom-terraform-providers/test-docker-provider
+cat main.tf
+terraform plan
+terraform apply --auto-approve
+docker ps
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/31eb035a-8a5e-4edc-8425-45a9e29cdf74)
+![image](https://github.com/user-attachments/assets/e5bbb09f-8f00-4054-aebc-196e8b391318)
+![image](https://github.com/user-attachments/assets/3c029425-1a47-430d-b249-1271896748c3)
+![image](https://github.com/user-attachments/assets/f9667cc1-b098-4773-b4fe-dcf50ff07cb2)
+
