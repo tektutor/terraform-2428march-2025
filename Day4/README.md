@@ -17,3 +17,12 @@ Expected output
 ![image](https://github.com/user-attachments/assets/4fd5973e-443a-4abb-a3e5-791f1cfe4af3)
 ![image](https://github.com/user-attachments/assets/265450eb-0395-41ff-bb3d-888d4cbb43f1)
 ![image](https://github.com/user-attachments/assets/9f1784d2-217f-4dcd-b40e-5506d05d13ea)
+
+Once you are done with this exercise, let's dispose the resource we provisioned via terraform
+```
+terraform destroy --auto-approve
+```
+![image](https://github.com/user-attachments/assets/89d3b63f-4ea0-43f5-84a3-6623015e9a5a)
+![image](https://github.com/user-attachments/assets/a4dd1fe8-08a9-4906-aa01-80bc88d4793c)
+![image](https://github.com/user-attachments/assets/08a995a4-5227-43e5-acea-ce73c01a20bd)
+![image](https://github.com/user-attachments/assets/b417bc76-6650-4e08-813d-ecce2eaf5412)
