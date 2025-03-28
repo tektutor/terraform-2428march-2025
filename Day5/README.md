@@ -156,3 +156,24 @@ click "Save and Finish"
 Click "Start using Jenkins"
 ![image](https://github.com/user-attachments/assets/5346ecc3-204b-4c7c-a4fb-9b740d2265f5)
 
+## Lab - Let's create a Jenkins Job to setup a CI/CD Pipeline for our Training Repository in GitHub
+
+Let's launch the Jenkins Dashboard in chrome web browser
+![image](https://github.com/user-attachments/assets/105786c8-5b44-446e-b79e-7bde879c424e)
+
+Let's click on "Create a Job"
+![image](https://github.com/user-attachments/assets/0fc6378d-c3cb-4e8c-b456-ce5760e3f382)
+
+Under Enter an item name, type "DevOpsCICDPipeline" and select Pipeline under Select an item
+![image](https://github.com/user-attachments/assets/e03adc52-2a90-4807-95a3-ed6d894c4ace)
+Click "Ok"
+![image](https://github.com/user-attachments/assets/4ca923ae-5dfd-4518-9010-ac7fc857a0d5)
+
+General Section
+![image](https://github.com/user-attachments/assets/06b1464b-4a61-4fb3-9510-4579ac0eb166)
+
+Triggers Section
+Select Poll SCM, Under the Schedule type "H/02 * * * *"
+![image](https://github.com/user-attachments/assets/79cf9118-c3f3-4ce3-8614-ee203a665fc1)
+
+
