@@ -1,0 +1,7 @@
+- name: Install nginx 
+  hosts: all
+  tasks:
+  - name: Install nginx
+    apt: name=nginx state=latest update_cache=yes
+
+  - service: name=nginx state=started
