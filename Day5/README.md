@@ -129,9 +129,11 @@ Expected output
 ![image](https://github.com/user-attachments/assets/8fe88b12-c923-4137-baa4-3737b1a50543)
 ![image](https://github.com/user-attachments/assets/517588c7-62d1-4938-b52d-3a88cfc7b35a)
 
-## Lab - Accessing Jenkins Dashboard from your RPS Cloud machine chrome web browser
+## Lab - Accessing Jenkins Dashboard and configuring Jenkins from your RPS Cloud machine chrome web browser
 <pre>
 http://localhost:8080  
 </pre>
 
 Expected output
+![image](https://github.com/user-attachments/assets/b0726299-8dcd-493b-9309-88181b4ca214)
+
