@@ -42,7 +42,7 @@ pipeline {
                 script {
 		  dir("Day5/DevOpsCICDPipeline/custom-terraform-provider/file") {
 		     sh "rm -f go.mod go.sum"
-	             sh "go mod init github.com/hashicorp/terraform-provider-file"
+	             sh "go mod init github.com/tektutor/terraform-provider-file"
 		     sh "go mod tidy"
 		     sh "go build"
 		     sh "go install"
@@ -55,7 +55,7 @@ pipeline {
                 script {
 		  dir("Day5/DevOpsCICDPipeline/custom-terraform-provider/docker") {
 		     sh "rm -f go.mod go.sum"
-	             sh "go mod init github.com/hashicorp/terraform-provider-docker"
+	             sh "go mod init github.com/tektutor/terraform-provider-docker"
 		     sh "go mod tidy"
 		     sh "go build"
 		     sh "go install"
