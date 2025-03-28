@@ -4,6 +4,7 @@ import (
           "fmt"
           "os"
           "os/user"
+          "github.com/sttk/stringcase"
 )
 
 func main() {
@@ -13,5 +14,5 @@ func main() {
                 os.Exit(1)
         }
 
-        fmt.Printf("Hello %s, welcome!\n", u.Username)
+        fmt.Printf("Hello %s, welcome!\n", stringcase.PascalCase(u.Username) )
 }
