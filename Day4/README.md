@@ -83,6 +83,58 @@ Expected output
 ![image](https://github.com/user-attachments/assets/4b8c63fb-3c77-49bd-adc0-944f0cc59fe1)
 ![image](https://github.com/user-attachments/assets/918e28fb-f184-4a71-9c03-9396be6d0a95)
 
+## Lab - Understanding Terraform Custom Provider Development Procedure
+
+## Terraform
+<pre>
+- the key feature of Terraform is the ability to manage infrastructure on virtually any platform
+- Terraform interacts with cloud providers, third-party tools and APIs
+- as Terraform manages a diverse variety of infrastructure resources, it depends on providers to interact with cloud, third-party tools and manage resources
+- as Terraform is implemented in Go language by HashiCorp, the Terraform Providers are also developed in Go language
+- Terraform Core/Enterprise as such doesn't know how to interact with Cloud vendors, third-party software tools, APIs, etc
+- Terraform Providers knows to interact with cloud vendors, third-party software, APIs, etc.,
+</pre>  
+
+## Terraform Provider
+<pre>
+- Terraform Plugin is an executable plugin that is developed using Terraform Plugin Framework 
+- Terraform follows a specific folder structure
+- each Provider manages one or more Resources and/or DataSources
+- For example
+  - a docker provider supports many types of docker resources and datasources
+    - resources ( resources managed by Terraform )
+      - docker_image
+      - docker_container
+      - docker_network
+    - datasources ( read-only resources that are used by Terraform but not managed by Terraform )
+      - docker_image
+      - docker_container
+      - docker_network
+</pre>
+
+Terraform Provider follows a specific directory structure
+
+Let's say you wish to create a custom terraform provider for docker, you need to follow the below procedure
+```
+cd ~
+mkdir terraform-provider-docker
+cd terraform-provider-docker
+go mod init github.com/tektutor/terraform-provider-docker
+touch main.go
+mkdir -p internal/provider
+touch internal/provider/provider.go
+touch internal/provider/resource_docker_container.go
+touch internal/provider/resource_docker_image.go
+touch internal/provider/datasource_docker_container.go
+touch internal/provider/datasource_docker_image.go
+
+go mod tidy
+```
+<pre>
+- The entry-point function for Terraform Provider plugin is the main function.
+- The Terraform Provider main function starts a server
+</pre>
+
 ## Lab - Develop a custom terraform file provider in golang using Terraform Provider plugin SDK
 
 You need to create a folder 
