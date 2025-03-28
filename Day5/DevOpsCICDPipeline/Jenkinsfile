@@ -67,6 +67,7 @@ pipeline {
             steps {
                 script {
 		  dir("Day5/DevOpsCICDPipeline/terraform/custom-terraform-providers/test-docker-provider") {
+		    sh "rm -f terraform.tfstate*"
                     sh "terraform plan"
 		    sh "terraform apply --auto-approve"
 		    sh "terraform show"
