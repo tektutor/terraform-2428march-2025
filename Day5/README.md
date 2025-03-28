@@ -139,4 +139,11 @@ Expected output
 ![image](https://github.com/user-attachments/assets/7b406de9-076d-4c58-abd7-c48b07500670)
 ![image](https://github.com/user-attachments/assets/ae115b35-1f87-44d0-9e69-4e971b80d25e)
 ![image](https://github.com/user-attachments/assets/b9650839-c85d-4d25-96b6-c5240bf8e492)
+Click "continue"
+![image](https://github.com/user-attachments/assets/bfebad20-6ffa-4f57-8148-5dc5777ee691)
+Select "Install Suggested Plugins"
+![image](https://github.com/user-attachments/assets/d42c55d8-0c4f-4621-81d2-20b65ed7f36b)
+![image](https://github.com/user-attachments/assets/3a603538-86f9-4df0-be7f-451744cf0fb8)
+![image](https://github.com/user-attachments/assets/a7d38af7-a97c-4965-8ca4-257091edc999)
+![image](https://github.com/user-attachments/assets/e1442fdc-81b3-4dac-a633-59a9e7adbfed)
 
