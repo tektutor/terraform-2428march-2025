@@ -126,7 +126,8 @@ java -jar ./jenkins.war
 ```
 
 Expected output
-![image](https://github.com/user-attachments/assets/3020ac7f-4302-4a42-b835-cfc1a171428d)
+![image](https://github.com/user-attachments/assets/8fe88b12-c923-4137-baa4-3737b1a50543)
+![image](https://github.com/user-attachments/assets/517588c7-62d1-4938-b52d-3a88cfc7b35a)
 
 ## Lab - Accessing Jenkins Dashboard from your RPS Cloud machine chrome web browser
 <pre>
