@@ -12,7 +12,7 @@ terraform {
 provider "docker" {
 }
 
-provider "file" {
+provider "localfile" {
 
 }
 
