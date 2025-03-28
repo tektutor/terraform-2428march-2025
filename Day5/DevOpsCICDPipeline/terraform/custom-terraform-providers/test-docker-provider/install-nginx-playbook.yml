@@ -1,7 +1,4 @@
-- name: Install nginx 
+- name: This playbook will install nginx, configure nginx and deploy custom web page using our custom nginx role
   hosts: all
-  tasks:
-  - name: Install nginx
-    apt: name=nginx state=latest update_cache=yes
-
-  - service: name=nginx state=started
+  roles:
+  - nginx

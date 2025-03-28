@@ -1,0 +1,11 @@
+- name: Let's create the nginx custom web root folder 
+  file: path=/var/html state=directory mode=0777
+
+- name: Retrieve IP address of ansible node
+  shell: hostname -i
+  register: output
+
+- debug: var=output
+
+- name: Deploy custom web page into our custom nginx web root folder
+  template: src=index.html.j2 dest=/var/html/index.html
