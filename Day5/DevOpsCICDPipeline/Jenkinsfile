@@ -40,7 +40,7 @@ pipeline {
 	stage("Build Custom Terraform File Provider and Install it") {
 	    steps {
                 script {
-		  dir("Day5/DevOpsCICDPipeline/custom-terraform-provider/file") {
+		  dir("Day5/DevOpsCICDPipeline/terraform/custom-terraform-provider/file") {
 		     sh "rm -f go.mod go.sum"
 	             sh "go mod init github.com/tektutor/terraform-provider-file"
 		     sh "go mod tidy"
@@ -53,7 +53,7 @@ pipeline {
 	stage("Build Custom Terraform Docker Provider and Install it") {
 	    steps {
                 script {
-		  dir("Day5/DevOpsCICDPipeline/custom-terraform-provider/docker") {
+		  dir("Day5/DevOpsCICDPipeline/terraform/custom-terraform-provider/docker") {
 		     sh "rm -f go.mod go.sum"
 	             sh "go mod init github.com/tektutor/terraform-provider-docker"
 		     sh "go mod tidy"
