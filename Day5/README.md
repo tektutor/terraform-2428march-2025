@@ -136,4 +136,7 @@ http://localhost:8080
 
 Expected output
 ![image](https://github.com/user-attachments/assets/b0726299-8dcd-493b-9309-88181b4ca214)
+![image](https://github.com/user-attachments/assets/7b406de9-076d-4c58-abd7-c48b07500670)
+![image](https://github.com/user-attachments/assets/ae115b35-1f87-44d0-9e69-4e971b80d25e)
+![image](https://github.com/user-attachments/assets/b9650839-c85d-4d25-96b6-c5240bf8e492)
 
