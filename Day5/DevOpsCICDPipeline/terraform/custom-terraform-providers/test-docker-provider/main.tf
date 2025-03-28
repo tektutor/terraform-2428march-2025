@@ -9,6 +9,13 @@ terraform {
   }
 }
 
+provider "docker" {
+}
+
+provider "file" {
+
+}
+
 resource "docker_image" "nginx" {
   image_name = "bitnami/nginx:latest"  
 }
