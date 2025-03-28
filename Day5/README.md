@@ -176,4 +176,27 @@ Triggers Section
 Select Poll SCM, Under the Schedule type "H/02 * * * *"
 ![image](https://github.com/user-attachments/assets/79cf9118-c3f3-4ce3-8614-ee203a665fc1)
 
+Pipeline Section
+
+Click Definition and Select "Pipeline script from SCM"
+![image](https://github.com/user-attachments/assets/0de66a0e-3384-4ebc-a292-798320db4bb3)
+Under the SCM, select "Git"
+![image](https://github.com/user-attachments/assets/6494c9c5-a837-4115-a3b6-4a7cb03428a5)
+Under the Repository URL, type "https://github.com/tektutor/terraform-2428march-2025.git" without quotes
+Under the Branches to Build, replace "master" with "main"
+![image](https://github.com/user-attachments/assets/68d51815-0dd8-4df5-9ae0-239adee48314)
+![image](https://github.com/user-attachments/assets/cc0d1dac-ae9b-4d3d-a3c5-b1fd0a6ccbb7)
+![image](https://github.com/user-attachments/assets/316597d8-bb2b-4a91-926c-9e6cf4ab76c9)
+Under the Script Path Replace "Jenkinsfile" with "Day5/DevOpsCICDPipeline/Jenkinsfile" without quotes
+![image](https://github.com/user-attachments/assets/356befcd-76b4-42b5-8a45-ec4f30885193)
+Click "Save"
+![image](https://github.com/user-attachments/assets/72bbfb19-6acc-40de-90f8-8f4ee4c06ee5)
+
+Progress
+![image](https://github.com/user-attachments/assets/55a96db3-3026-4b99-a68c-ef30e26c0e5c)
+![image](https://github.com/user-attachments/assets/4f383eb4-5fec-4d65-84b8-61660c5536b2)
+
+
+
+
 
