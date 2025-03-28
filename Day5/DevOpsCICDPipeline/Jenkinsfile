@@ -5,7 +5,7 @@ pipeline {
         label 'built-in'
     }
     stages {
-        stage('Build Custom Docker Image') {
+        stage('Build Custom Docker Ubuntu Image') {
             steps {
                 script {
 		    dir("Day5/DevOpsCICDPipeline/CustomDockerImages/ubuntu") {
@@ -17,6 +17,18 @@ pipeline {
                 }
             }
         }
+        stage('Build Custom Docker Rocky Image') {
+            steps {
+                script {
+		    dir("Day5/DevOpsCICDPipeline/CustomDockerImages/rocky") {
+		         sh "cp ~/.ssh/id_ed25519.pub authorized_keys"
+		         sh "docker build -t tektutor/rocky-ansible:latest ."
+			 sh "rm authorized_keys"
+			 sh "docker images | grep rocky-ansible"
+		    }
+                }
+            }
+        }	    
 //	stage("Manual approval") {
 //		steps {
 //			timeout( time: 1, unit: "DAYS") {
